@@ -1,0 +1,791 @@
+2021-40-15 15:40:10 INFO  EmployeesRestAPI:17 - ***************TC001_GET_ALL_EMPLOYEES STARTED******************
+2021-40-15 15:40:16 INFO  EmployeesRestAPI:28 - ********************Checking Response Body **********************
+2021-40-15 15:40:16 INFO  EmployeesRestAPI:30 - ResponseBody :<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Google Tag Manager -->
+        <script>
+            ;(function (w, d, s, l, i) {
+                w[l] = w[l] || []
+                w[l].push({
+                    'gtm.start': new Date().getTime(),
+                    event: 'gtm.js',
+                })
+                var f = d.getElementsByTagName(s)[0],
+                    j = d.createElement(s),
+                    dl = l != 'dataLayer' ? '&l=' + l : ''
+                j.async = true
+                j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl
+                f.parentNode.insertBefore(j, f)
+            })(window, document, 'script', 'dataLayer', 'GTM-KB622KF')
+        </script>
+        <!-- End Google Tag Manager -->
+        <script src="https://js.stripe.com/v3/"></script>
+        <meta charset="utf-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0, maximum-scale=1.0"
+        />
+        <meta
+            name="description"
+            content="A hosted REST-API ready to respond to your AJAX requests"
+        />
+        <title>
+            Reqres - A hosted REST-API ready to respond to your AJAX requests
+        </title>
+        <link
+            href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css"
+            rel="stylesheet"
+        />
+
+        <link rel="stylesheet" href="/css/app.css" />
+        <script
+            type="text/javascript"
+            src="//m.servedby-buysellads.com/monetization.custom.js"
+        ></script>
+    </head>
+    <body>
+        <div class="header-content">
+            <header class="main-header">
+                <section class="wrap">
+                    <h1 class="logo"><a href="/">Req&#8201;|&#8201;Res</a></h1>
+                </section>
+            </header>
+            <main class="the-sell">
+                <div class="wrap">
+                    <h2 class="tagline">
+                        Test your front-end against a real API
+                    </h2>
+                    <section class="key-sells">
+                        <div class="sell">
+                            <div class="v-center">
+                                <h3>Fake data</h3>
+                                <p>
+                                    No more tedious sample data creation, we've
+                                    got it covered.
+                                </p>
+                            </div>
+                            <i class="fa fa-cloud-download"></i>
+                        </div>
+                        <div class="sell">
+                            <div class="v-center">
+                                <h3>Real responses</h3>
+                                <p>
+                                    Develop with real response codes. GET, POST,
+                                    PUT &amp; DELETE supported.
+                                </p>
+                            </div>
+                            <i class="fa fa-code"></i>
+                        </div>
+                        <div class="sell">
+                            <div class="v-center">
+                                <h3>Always-on</h3>
+                                <p>
+                                    24/7 <strong><em>free</em></strong> access
+                                    in your development phases. Go nuts.
+                                </p>
+                            </div>
+                            <i class="fa fa-toggle-on"></i>
+                        </div>
+                    </section>
+                    <h2 class="tagline">
+                        A hosted REST-API ready to respond to your AJAX
+                        requests.
+                    </h2>
+                    <div class="t-center main-arrow">
+                        <i class="fa fa-arrow-circle-down"></i>
+                    </div>
+                    <script
+                        async
+                        type="text/javascript"
+                        src="//cdn.carbonads.com/carbon.js?serve=CE7D6K3E&placement=reqresin"
+                        id="_carbonads_js"
+                    ></script>
+                </div>
+            </main>
+        </div>
+        <div class="container">404</div>
+        <footer>
+            <div class="wrap">
+                <hr class="dark" />
+                <p class="t-center">
+                    Made for developers and designers by
+                    <a href="https://benhowdle.im">Ben Howdle</a>
+                </p>
+            </div>
+        </footer>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.3/fastclick.min.js"></script>
+        <script src="/js/app.js"></script>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script
+            async
+            src="https://www.googletagmanager.com/gtag/js?id=UA-174008107-1"
+        ></script>
+        <script>
+            window.dataLayer = window.dataLayer || []
+            function gtag() {
+                dataLayer.push(arguments)
+            }
+            gtag('js', new Date())
+
+            gtag('config', 'UA-174008107-1')
+        </script>
+        <script>
+            ;(function (i, s, o, g, r, a, m) {
+                i['GoogleAnalyticsObject'] = r
+                ;(i[r] =
+                    i[r] ||
+                    function () {
+                        ;(i[r].q = i[r].q || []).push(arguments)
+                    }),
+                    (i[r].l = 1 * new Date())
+                ;(a = s.createElement(o)), (m = s.getElementsByTagName(o)[0])
+                a.async = 1
+                a.src = g
+                m.parentNode.insertBefore(a, m)
+            })(
+                window,
+                document,
+                'script',
+                '//www.google-analytics.com/analytics.js',
+                'ga'
+            )
+
+            ga('create', 'UA-55888877-1', 'auto')
+            ga('send', 'pageview')
+        </script>
+        <script>
+            ;(function () {
+                if (typeof _bsa !== 'undefined' && _bsa) {
+                    _bsa.init(
+                        'custom',
+                        'CEBIP53J',
+                        'placement:reqresin-sponsor',
+                        {
+                            target: '#impeccable-js',
+                            template: `
+        <a href="##link##" rel="sponsored noopener" target="_blank" title="##company## — ##tagline##">
+        <img src="##logo##" style="background-color: ##backgroundColor##">
+        <div class="sponsor-description">##description##</div>
+        <div class="sponsor-cta" style="background-color: ##backgroundColor##; color: ##textColor##">##callToAction##</div>
+        </a>
+        `,
+                        }
+                    )
+                }
+            })()
+        </script>
+    </body>
+</html>
+
+2021-40-15 15:40:16 INFO  EmployeesRestAPI:50 - Response Time :1700
+2021-40-15 15:40:16 INFO  EmployeesRestAPI:39 - **********Checking status code**************
+2021-40-15 15:40:16 INFO  EmployeesRestAPI:41 - Status Code:404
+2021-44-15 15:44:17 INFO  EmployeesRestAPI:17 - ***************TC001_GET_ALL_EMPLOYEES STARTED******************
+2021-44-15 15:44:22 INFO  EmployeesRestAPI:28 - ********************Checking Response Body **********************
+2021-44-15 15:44:22 INFO  EmployeesRestAPI:30 - ResponseBody :{"page":1,"per_page":6,"total":12,"total_pages":2,"data":[{"id":1,"email":"george.bluth@reqres.in","first_name":"George","last_name":"Bluth","avatar":"https://reqres.in/img/faces/1-image.jpg"},{"id":2,"email":"janet.weaver@reqres.in","first_name":"Janet","last_name":"Weaver","avatar":"https://reqres.in/img/faces/2-image.jpg"},{"id":3,"email":"emma.wong@reqres.in","first_name":"Emma","last_name":"Wong","avatar":"https://reqres.in/img/faces/3-image.jpg"},{"id":4,"email":"eve.holt@reqres.in","first_name":"Eve","last_name":"Holt","avatar":"https://reqres.in/img/faces/4-image.jpg"},{"id":5,"email":"charles.morris@reqres.in","first_name":"Charles","last_name":"Morris","avatar":"https://reqres.in/img/faces/5-image.jpg"},{"id":6,"email":"tracey.ramos@reqres.in","first_name":"Tracey","last_name":"Ramos","avatar":"https://reqres.in/img/faces/6-image.jpg"}],"support":{"url":"https://reqres.in/#support-heading","text":"To keep ReqRes free, contributions towards server costs are appreciated!"}}
+2021-44-15 15:44:22 INFO  EmployeesRestAPI:50 - Response Time :980
+2021-44-15 15:44:22 INFO  EmployeesRestAPI:39 - **********Checking status code**************
+2021-44-15 15:44:22 INFO  EmployeesRestAPI:41 - Status Code:200
+2021-50-15 15:50:30 INFO  EmployeesRestAPI:17 - ***************TC001_GET_ALL_EMPLOYEES STARTED******************
+2021-50-15 15:50:35 INFO  EmployeesRestAPI:28 - ********************Checking Response Body **********************
+2021-50-15 15:50:35 INFO  EmployeesRestAPI:30 - ResponseBody :{"page":1,"per_page":6,"total":12,"total_pages":2,"data":[{"id":1,"email":"george.bluth@reqres.in","first_name":"George","last_name":"Bluth","avatar":"https://reqres.in/img/faces/1-image.jpg"},{"id":2,"email":"janet.weaver@reqres.in","first_name":"Janet","last_name":"Weaver","avatar":"https://reqres.in/img/faces/2-image.jpg"},{"id":3,"email":"emma.wong@reqres.in","first_name":"Emma","last_name":"Wong","avatar":"https://reqres.in/img/faces/3-image.jpg"},{"id":4,"email":"eve.holt@reqres.in","first_name":"Eve","last_name":"Holt","avatar":"https://reqres.in/img/faces/4-image.jpg"},{"id":5,"email":"charles.morris@reqres.in","first_name":"Charles","last_name":"Morris","avatar":"https://reqres.in/img/faces/5-image.jpg"},{"id":6,"email":"tracey.ramos@reqres.in","first_name":"Tracey","last_name":"Ramos","avatar":"https://reqres.in/img/faces/6-image.jpg"}],"support":{"url":"https://reqres.in/#support-heading","text":"To keep ReqRes free, contributions towards server costs are appreciated!"}}
+2021-50-15 15:50:35 INFO  EmployeesRestAPI:50 - Response Time :1052
+2021-50-15 15:50:35 INFO  EmployeesRestAPI:39 - **********Checking status code**************
+2021-50-15 15:50:35 INFO  EmployeesRestAPI:41 - Status Code:200
+2021-34-15 16:34:41 INFO  EmployeesRestAPI:17 - ***************TC001_GET_ALL_EMPLOYEES STARTED******************
+2021-34-15 16:34:46 INFO  EmployeesRestAPI:94 - ******************************Checking content Lengrh******************
+2021-34-15 16:34:46 INFO  EmployeesRestAPI:96 - Content Length :null
+2021-34-15 16:34:46 INFO  EmployeesRestAPI:69 - ****************************Checking content Type**************
+2021-34-15 16:34:46 INFO  EmployeesRestAPI:71 - Content Type is application/json; charset=utf-8
+2021-34-15 16:34:46 INFO  EmployeesRestAPI:28 - ********************Checking Response Body **********************
+2021-34-15 16:34:46 INFO  EmployeesRestAPI:30 - ResponseBody :{"page":1,"per_page":6,"total":12,"total_pages":2,"data":[{"id":1,"email":"george.bluth@reqres.in","first_name":"George","last_name":"Bluth","avatar":"https://reqres.in/img/faces/1-image.jpg"},{"id":2,"email":"janet.weaver@reqres.in","first_name":"Janet","last_name":"Weaver","avatar":"https://reqres.in/img/faces/2-image.jpg"},{"id":3,"email":"emma.wong@reqres.in","first_name":"Emma","last_name":"Wong","avatar":"https://reqres.in/img/faces/3-image.jpg"},{"id":4,"email":"eve.holt@reqres.in","first_name":"Eve","last_name":"Holt","avatar":"https://reqres.in/img/faces/4-image.jpg"},{"id":5,"email":"charles.morris@reqres.in","first_name":"Charles","last_name":"Morris","avatar":"https://reqres.in/img/faces/5-image.jpg"},{"id":6,"email":"tracey.ramos@reqres.in","first_name":"Tracey","last_name":"Ramos","avatar":"https://reqres.in/img/faces/6-image.jpg"}],"support":{"url":"https://reqres.in/#support-heading","text":"To keep ReqRes free, contributions towards server costs are appreciated!"}}
+2021-34-15 16:34:46 INFO  EmployeesRestAPI:49 - *********************Checking Response Time***********************
+2021-34-15 16:34:46 INFO  EmployeesRestAPI:51 - Response Time :481
+2021-34-15 16:34:46 INFO  EmployeesRestAPI:61 - ***************************Status line****************************
+2021-34-15 16:34:46 INFO  EmployeesRestAPI:63 - Status line : HTTP/1.1 200 OK
+2021-34-15 16:34:46 INFO  EmployeesRestAPI:78 - ********************Server Type************************
+2021-34-15 16:34:46 INFO  EmployeesRestAPI:80 - Server type is:cloudflare
+2021-34-15 16:34:46 INFO  EmployeesRestAPI:86 - ***************************Checking content Encoding**************
+2021-34-15 16:34:46 INFO  EmployeesRestAPI:88 - Content Encoding :gzip
+2021-34-15 16:34:46 INFO  EmployeesRestAPI:39 - **********Checking status code**************
+2021-34-15 16:34:46 INFO  EmployeesRestAPI:41 - Status Code:200
+2021-42-15 16:42:27 INFO  EmployeesRestAPI:17 - ***************TC001_GET_ALL_EMPLOYEES STARTED******************
+2021-42-15 16:42:31 INFO  EmployeesRestAPI:94 - ******************************Checking content Lengrh******************
+2021-42-15 16:42:31 INFO  EmployeesRestAPI:96 - Content Length :null
+2021-42-15 16:42:31 INFO  EmployeesRestAPI:69 - ****************************Checking content Type**************
+2021-42-15 16:42:31 INFO  EmployeesRestAPI:71 - Content Type is application/json; charset=utf-8
+2021-42-15 16:42:31 INFO  EmployeesRestAPI:28 - ********************Checking Response Body **********************
+2021-42-15 16:42:31 INFO  EmployeesRestAPI:30 - ResponseBody :{"page":1,"per_page":6,"total":12,"total_pages":2,"data":[{"id":1,"email":"george.bluth@reqres.in","first_name":"George","last_name":"Bluth","avatar":"https://reqres.in/img/faces/1-image.jpg"},{"id":2,"email":"janet.weaver@reqres.in","first_name":"Janet","last_name":"Weaver","avatar":"https://reqres.in/img/faces/2-image.jpg"},{"id":3,"email":"emma.wong@reqres.in","first_name":"Emma","last_name":"Wong","avatar":"https://reqres.in/img/faces/3-image.jpg"},{"id":4,"email":"eve.holt@reqres.in","first_name":"Eve","last_name":"Holt","avatar":"https://reqres.in/img/faces/4-image.jpg"},{"id":5,"email":"charles.morris@reqres.in","first_name":"Charles","last_name":"Morris","avatar":"https://reqres.in/img/faces/5-image.jpg"},{"id":6,"email":"tracey.ramos@reqres.in","first_name":"Tracey","last_name":"Ramos","avatar":"https://reqres.in/img/faces/6-image.jpg"}],"support":{"url":"https://reqres.in/#support-heading","text":"To keep ReqRes free, contributions towards server costs are appreciated!"}}
+2021-42-15 16:42:31 INFO  EmployeesRestAPI:49 - *********************Checking Response Time***********************
+2021-42-15 16:42:31 INFO  EmployeesRestAPI:51 - Response Time :474
+2021-42-15 16:42:31 INFO  EmployeesRestAPI:61 - ***************************Status line****************************
+2021-42-15 16:42:31 INFO  EmployeesRestAPI:63 - Status line : HTTP/1.1 200 OK
+2021-42-15 16:42:31 INFO  EmployeesRestAPI:78 - ********************Server Type************************
+2021-42-15 16:42:31 INFO  EmployeesRestAPI:80 - Server type is:cloudflare
+2021-42-15 16:42:31 INFO  EmployeesRestAPI:86 - ***************************Checking content Encoding**************
+2021-42-15 16:42:31 INFO  EmployeesRestAPI:88 - Content Encoding :gzip
+2021-42-15 16:42:31 INFO  EmployeesRestAPI:39 - **********Checking status code**************
+2021-42-15 16:42:31 INFO  EmployeesRestAPI:41 - Status Code:200
+2021-07-15 18:07:11 INFO  EmployeesRestAPI:18 - ***************TC001_GET_ALL_EMPLOYEES STARTED******************
+2021-07-15 18:07:16 INFO  EmployeesRestAPI:95 - ******************************Checking content Lengrh******************
+2021-07-15 18:07:16 INFO  EmployeesRestAPI:97 - Content Length :null
+2021-07-15 18:07:16 INFO  EmployeesRestAPI:70 - ****************************Checking content Type**************
+2021-07-15 18:07:16 INFO  EmployeesRestAPI:72 - Content Type is application/json; charset=utf-8
+2021-07-15 18:07:16 INFO  EmployeesRestAPI:29 - ********************Checking Response Body **********************
+2021-07-15 18:07:16 INFO  EmployeesRestAPI:31 - ResponseBody :{"page":1,"per_page":6,"total":12,"total_pages":2,"data":[{"id":1,"email":"george.bluth@reqres.in","first_name":"George","last_name":"Bluth","avatar":"https://reqres.in/img/faces/1-image.jpg"},{"id":2,"email":"janet.weaver@reqres.in","first_name":"Janet","last_name":"Weaver","avatar":"https://reqres.in/img/faces/2-image.jpg"},{"id":3,"email":"emma.wong@reqres.in","first_name":"Emma","last_name":"Wong","avatar":"https://reqres.in/img/faces/3-image.jpg"},{"id":4,"email":"eve.holt@reqres.in","first_name":"Eve","last_name":"Holt","avatar":"https://reqres.in/img/faces/4-image.jpg"},{"id":5,"email":"charles.morris@reqres.in","first_name":"Charles","last_name":"Morris","avatar":"https://reqres.in/img/faces/5-image.jpg"},{"id":6,"email":"tracey.ramos@reqres.in","first_name":"Tracey","last_name":"Ramos","avatar":"https://reqres.in/img/faces/6-image.jpg"}],"support":{"url":"https://reqres.in/#support-heading","text":"To keep ReqRes free, contributions towards server costs are appreciated!"}}
+2021-07-15 18:07:16 INFO  EmployeesRestAPI:50 - *********************Checking Response Time***********************
+2021-07-15 18:07:16 INFO  EmployeesRestAPI:52 - Response Time :1459
+2021-07-15 18:07:16 INFO  EmployeesRestAPI:62 - ***************************Status line****************************
+2021-07-15 18:07:16 INFO  EmployeesRestAPI:64 - Status line : HTTP/1.1 200 OK
+2021-07-15 18:07:16 INFO  EmployeesRestAPI:79 - ********************Server Type************************
+2021-07-15 18:07:16 INFO  EmployeesRestAPI:81 - Server type is:cloudflare
+2021-07-15 18:07:16 INFO  EmployeesRestAPI:87 - ***************************Checking content Encoding**************
+2021-07-15 18:07:16 INFO  EmployeesRestAPI:89 - Content Encoding :gzip
+2021-07-15 18:07:16 INFO  EmployeesRestAPI:107 - **************************Getting cookies***********************
+2021-07-15 18:07:16 INFO  EmployeesRestAPI:40 - **********Checking status code**************
+2021-07-15 18:07:16 INFO  EmployeesRestAPI:42 - Status Code:200
+2021-07-15 18:07:16 INFO  EmployeesRestAPI:115 - *****************Finished TC001_Get_All_Employees********************
+2021-53-17 17:53:16 INFO  EmployeesRestAPI:18 - ***************TC001_GET_ALL_EMPLOYEES STARTED******************
+2021-53-17 17:53:21 INFO  EmployeesRestAPI:95 - ******************************Checking content Lengrh******************
+2021-53-17 17:53:21 INFO  EmployeesRestAPI:97 - Content Length :null
+2021-53-17 17:53:21 INFO  EmployeesRestAPI:70 - ****************************Checking content Type**************
+2021-53-17 17:53:21 INFO  EmployeesRestAPI:72 - Content Type is application/json; charset=utf-8
+2021-53-17 17:53:21 INFO  EmployeesRestAPI:29 - ********************Checking Response Body **********************
+2021-53-17 17:53:21 INFO  EmployeesRestAPI:31 - ResponseBody :{"page":1,"per_page":6,"total":12,"total_pages":2,"data":[{"id":1,"email":"george.bluth@reqres.in","first_name":"George","last_name":"Bluth","avatar":"https://reqres.in/img/faces/1-image.jpg"},{"id":2,"email":"janet.weaver@reqres.in","first_name":"Janet","last_name":"Weaver","avatar":"https://reqres.in/img/faces/2-image.jpg"},{"id":3,"email":"emma.wong@reqres.in","first_name":"Emma","last_name":"Wong","avatar":"https://reqres.in/img/faces/3-image.jpg"},{"id":4,"email":"eve.holt@reqres.in","first_name":"Eve","last_name":"Holt","avatar":"https://reqres.in/img/faces/4-image.jpg"},{"id":5,"email":"charles.morris@reqres.in","first_name":"Charles","last_name":"Morris","avatar":"https://reqres.in/img/faces/5-image.jpg"},{"id":6,"email":"tracey.ramos@reqres.in","first_name":"Tracey","last_name":"Ramos","avatar":"https://reqres.in/img/faces/6-image.jpg"}],"support":{"url":"https://reqres.in/#support-heading","text":"To keep ReqRes free, contributions towards server costs are appreciated!"}}
+2021-53-17 17:53:21 INFO  EmployeesRestAPI:50 - *********************Checking Response Time***********************
+2021-53-17 17:53:21 INFO  EmployeesRestAPI:52 - Response Time :1563
+2021-53-17 17:53:21 INFO  EmployeesRestAPI:62 - ***************************Status line****************************
+2021-53-17 17:53:21 INFO  EmployeesRestAPI:64 - Status line : HTTP/1.1 200 OK
+2021-53-17 17:53:21 INFO  EmployeesRestAPI:79 - ********************Server Type************************
+2021-53-17 17:53:21 INFO  EmployeesRestAPI:81 - Server type is:cloudflare
+2021-53-17 17:53:21 INFO  EmployeesRestAPI:87 - ***************************Checking content Encoding**************
+2021-53-17 17:53:21 INFO  EmployeesRestAPI:89 - Content Encoding :gzip
+2021-53-17 17:53:21 INFO  EmployeesRestAPI:107 - **************************Getting cookies***********************
+2021-53-17 17:53:21 INFO  EmployeesRestAPI:40 - **********Checking status code**************
+2021-53-17 17:53:21 INFO  EmployeesRestAPI:42 - Status Code:200
+2021-53-17 17:53:21 INFO  EmployeesRestAPI:115 - *****************Finished TC001_Get_All_Employees********************
+2021-54-17 17:54:59 INFO  EmployeesRestAPI:18 - ***************TC001_GET_ALL_EMPLOYEES STARTED******************
+2021-55-17 17:55:04 INFO  EmployeesRestAPI:95 - ******************************Checking content Lengrh******************
+2021-55-17 17:55:04 INFO  EmployeesRestAPI:97 - Content Length :null
+2021-55-17 17:55:04 INFO  EmployeesRestAPI:70 - ****************************Checking content Type**************
+2021-55-17 17:55:04 INFO  EmployeesRestAPI:72 - Content Type is application/json; charset=utf-8
+2021-55-17 17:55:04 INFO  EmployeesRestAPI:29 - ********************Checking Response Body **********************
+2021-55-17 17:55:04 INFO  EmployeesRestAPI:31 - ResponseBody :{"page":1,"per_page":6,"total":12,"total_pages":2,"data":[{"id":1,"email":"george.bluth@reqres.in","first_name":"George","last_name":"Bluth","avatar":"https://reqres.in/img/faces/1-image.jpg"},{"id":2,"email":"janet.weaver@reqres.in","first_name":"Janet","last_name":"Weaver","avatar":"https://reqres.in/img/faces/2-image.jpg"},{"id":3,"email":"emma.wong@reqres.in","first_name":"Emma","last_name":"Wong","avatar":"https://reqres.in/img/faces/3-image.jpg"},{"id":4,"email":"eve.holt@reqres.in","first_name":"Eve","last_name":"Holt","avatar":"https://reqres.in/img/faces/4-image.jpg"},{"id":5,"email":"charles.morris@reqres.in","first_name":"Charles","last_name":"Morris","avatar":"https://reqres.in/img/faces/5-image.jpg"},{"id":6,"email":"tracey.ramos@reqres.in","first_name":"Tracey","last_name":"Ramos","avatar":"https://reqres.in/img/faces/6-image.jpg"}],"support":{"url":"https://reqres.in/#support-heading","text":"To keep ReqRes free, contributions towards server costs are appreciated!"}}
+2021-55-17 17:55:04 INFO  EmployeesRestAPI:50 - *********************Checking Response Time***********************
+2021-55-17 17:55:04 INFO  EmployeesRestAPI:52 - Response Time :933
+2021-55-17 17:55:04 INFO  EmployeesRestAPI:62 - ***************************Status line****************************
+2021-55-17 17:55:04 INFO  EmployeesRestAPI:64 - Status line : HTTP/1.1 200 OK
+2021-55-17 17:55:04 INFO  EmployeesRestAPI:79 - ********************Server Type************************
+2021-55-17 17:55:04 INFO  EmployeesRestAPI:81 - Server type is:cloudflare
+2021-55-17 17:55:04 INFO  EmployeesRestAPI:87 - ***************************Checking content Encoding**************
+2021-55-17 17:55:04 INFO  EmployeesRestAPI:89 - Content Encoding :gzip
+2021-55-17 17:55:04 INFO  EmployeesRestAPI:107 - **************************Getting cookies***********************
+2021-55-17 17:55:04 INFO  EmployeesRestAPI:40 - **********Checking status code**************
+2021-55-17 17:55:04 INFO  EmployeesRestAPI:42 - Status Code:200
+2021-55-17 17:55:04 INFO  EmployeesRestAPI:115 - *****************Finished TC001_Get_All_Employees********************
+2021-55-17 17:55:24 INFO  EmployeesRestAPI:18 - ***************TC001_GET_ALL_EMPLOYEES STARTED******************
+2021-55-17 17:55:28 INFO  EmployeesRestAPI:95 - ******************************Checking content Lengrh******************
+2021-55-17 17:55:28 INFO  EmployeesRestAPI:97 - Content Length :null
+2021-55-17 17:55:28 INFO  EmployeesRestAPI:70 - ****************************Checking content Type**************
+2021-55-17 17:55:28 INFO  EmployeesRestAPI:72 - Content Type is application/json; charset=utf-8
+2021-55-17 17:55:28 INFO  EmployeesRestAPI:29 - ********************Checking Response Body **********************
+2021-55-17 17:55:28 INFO  EmployeesRestAPI:31 - ResponseBody :{"page":1,"per_page":6,"total":12,"total_pages":2,"data":[{"id":1,"email":"george.bluth@reqres.in","first_name":"George","last_name":"Bluth","avatar":"https://reqres.in/img/faces/1-image.jpg"},{"id":2,"email":"janet.weaver@reqres.in","first_name":"Janet","last_name":"Weaver","avatar":"https://reqres.in/img/faces/2-image.jpg"},{"id":3,"email":"emma.wong@reqres.in","first_name":"Emma","last_name":"Wong","avatar":"https://reqres.in/img/faces/3-image.jpg"},{"id":4,"email":"eve.holt@reqres.in","first_name":"Eve","last_name":"Holt","avatar":"https://reqres.in/img/faces/4-image.jpg"},{"id":5,"email":"charles.morris@reqres.in","first_name":"Charles","last_name":"Morris","avatar":"https://reqres.in/img/faces/5-image.jpg"},{"id":6,"email":"tracey.ramos@reqres.in","first_name":"Tracey","last_name":"Ramos","avatar":"https://reqres.in/img/faces/6-image.jpg"}],"support":{"url":"https://reqres.in/#support-heading","text":"To keep ReqRes free, contributions towards server costs are appreciated!"}}
+2021-55-17 17:55:28 INFO  EmployeesRestAPI:50 - *********************Checking Response Time***********************
+2021-55-17 17:55:28 INFO  EmployeesRestAPI:52 - Response Time :737
+2021-55-17 17:55:28 INFO  EmployeesRestAPI:62 - ***************************Status line****************************
+2021-55-17 17:55:28 INFO  EmployeesRestAPI:64 - Status line : HTTP/1.1 200 OK
+2021-55-17 17:55:28 INFO  EmployeesRestAPI:79 - ********************Server Type************************
+2021-55-17 17:55:28 INFO  EmployeesRestAPI:81 - Server type is:cloudflare
+2021-55-17 17:55:28 INFO  EmployeesRestAPI:87 - ***************************Checking content Encoding**************
+2021-55-17 17:55:28 INFO  EmployeesRestAPI:89 - Content Encoding :gzip
+2021-55-17 17:55:28 INFO  EmployeesRestAPI:107 - **************************Getting cookies***********************
+2021-55-17 17:55:28 INFO  EmployeesRestAPI:40 - **********Checking status code**************
+2021-55-17 17:55:28 INFO  EmployeesRestAPI:42 - Status Code:200
+2021-55-17 17:55:28 INFO  EmployeesRestAPI:115 - *****************Finished TC001_Get_All_Employees********************
+2021-02-18 15:02:37 INFO  EmployeesRestAPI:18 - ***************TC001_GET_ALL_EMPLOYEES STARTED******************
+2021-02-18 15:02:42 INFO  EmployeesRestAPI:95 - ******************************Checking content Lengrh******************
+2021-02-18 15:02:42 INFO  EmployeesRestAPI:97 - Content Length :null
+2021-02-18 15:02:42 INFO  EmployeesRestAPI:70 - ****************************Checking content Type**************
+2021-02-18 15:02:42 INFO  EmployeesRestAPI:72 - Content Type is application/json; charset=utf-8
+2021-02-18 15:02:42 INFO  EmployeesRestAPI:29 - ********************Checking Response Body **********************
+2021-02-18 15:02:42 INFO  EmployeesRestAPI:31 - ResponseBody :{"page":1,"per_page":6,"total":12,"total_pages":2,"data":[{"id":1,"email":"george.bluth@reqres.in","first_name":"George","last_name":"Bluth","avatar":"https://reqres.in/img/faces/1-image.jpg"},{"id":2,"email":"janet.weaver@reqres.in","first_name":"Janet","last_name":"Weaver","avatar":"https://reqres.in/img/faces/2-image.jpg"},{"id":3,"email":"emma.wong@reqres.in","first_name":"Emma","last_name":"Wong","avatar":"https://reqres.in/img/faces/3-image.jpg"},{"id":4,"email":"eve.holt@reqres.in","first_name":"Eve","last_name":"Holt","avatar":"https://reqres.in/img/faces/4-image.jpg"},{"id":5,"email":"charles.morris@reqres.in","first_name":"Charles","last_name":"Morris","avatar":"https://reqres.in/img/faces/5-image.jpg"},{"id":6,"email":"tracey.ramos@reqres.in","first_name":"Tracey","last_name":"Ramos","avatar":"https://reqres.in/img/faces/6-image.jpg"}],"support":{"url":"https://reqres.in/#support-heading","text":"To keep ReqRes free, contributions towards server costs are appreciated!"}}
+2021-02-18 15:02:42 INFO  EmployeesRestAPI:50 - *********************Checking Response Time***********************
+2021-02-18 15:02:42 INFO  EmployeesRestAPI:52 - Response Time :1105
+2021-02-18 15:02:42 INFO  EmployeesRestAPI:62 - ***************************Status line****************************
+2021-02-18 15:02:42 INFO  EmployeesRestAPI:64 - Status line : HTTP/1.1 200 OK
+2021-02-18 15:02:42 INFO  EmployeesRestAPI:79 - ********************Server Type************************
+2021-02-18 15:02:42 INFO  EmployeesRestAPI:81 - Server type is:cloudflare
+2021-02-18 15:02:42 INFO  EmployeesRestAPI:87 - ***************************Checking content Encoding**************
+2021-02-18 15:02:42 INFO  EmployeesRestAPI:89 - Content Encoding :gzip
+2021-02-18 15:02:42 INFO  EmployeesRestAPI:107 - **************************Getting cookies***********************
+2021-02-18 15:02:42 INFO  EmployeesRestAPI:40 - **********Checking status code**************
+2021-02-18 15:02:42 INFO  EmployeesRestAPI:42 - Status Code:200
+2021-02-18 15:02:42 INFO  EmployeesRestAPI:115 - *****************Finished TC001_Get_All_Employees********************
+2021-08-18 15:08:27 INFO  EmployeesRestAPI:18 - ***************TC001_GET_ALL_EMPLOYEES STARTED******************
+2021-08-18 15:08:31 INFO  EmployeesRestAPI:95 - ******************************Checking content Lengrh******************
+2021-08-18 15:08:31 INFO  EmployeesRestAPI:97 - Content Length :null
+2021-08-18 15:08:31 INFO  EmployeesRestAPI:70 - ****************************Checking content Type**************
+2021-08-18 15:08:31 INFO  EmployeesRestAPI:72 - Content Type is application/json; charset=utf-8
+2021-08-18 15:08:31 INFO  EmployeesRestAPI:29 - ********************Checking Response Body **********************
+2021-08-18 15:08:31 INFO  EmployeesRestAPI:31 - ResponseBody :{"page":1,"per_page":6,"total":12,"total_pages":2,"data":[{"id":1,"email":"george.bluth@reqres.in","first_name":"George","last_name":"Bluth","avatar":"https://reqres.in/img/faces/1-image.jpg"},{"id":2,"email":"janet.weaver@reqres.in","first_name":"Janet","last_name":"Weaver","avatar":"https://reqres.in/img/faces/2-image.jpg"},{"id":3,"email":"emma.wong@reqres.in","first_name":"Emma","last_name":"Wong","avatar":"https://reqres.in/img/faces/3-image.jpg"},{"id":4,"email":"eve.holt@reqres.in","first_name":"Eve","last_name":"Holt","avatar":"https://reqres.in/img/faces/4-image.jpg"},{"id":5,"email":"charles.morris@reqres.in","first_name":"Charles","last_name":"Morris","avatar":"https://reqres.in/img/faces/5-image.jpg"},{"id":6,"email":"tracey.ramos@reqres.in","first_name":"Tracey","last_name":"Ramos","avatar":"https://reqres.in/img/faces/6-image.jpg"}],"support":{"url":"https://reqres.in/#support-heading","text":"To keep ReqRes free, contributions towards server costs are appreciated!"}}
+2021-08-18 15:08:31 INFO  EmployeesRestAPI:50 - *********************Checking Response Time***********************
+2021-08-18 15:08:31 INFO  EmployeesRestAPI:52 - Response Time :544
+2021-08-18 15:08:31 INFO  EmployeesRestAPI:62 - ***************************Status line****************************
+2021-08-18 15:08:31 INFO  EmployeesRestAPI:64 - Status line : HTTP/1.1 200 OK
+2021-08-18 15:08:31 INFO  EmployeesRestAPI:79 - ********************Server Type************************
+2021-08-18 15:08:31 INFO  EmployeesRestAPI:81 - Server type is:cloudflare
+2021-08-18 15:08:31 INFO  EmployeesRestAPI:87 - ***************************Checking content Encoding**************
+2021-08-18 15:08:31 INFO  EmployeesRestAPI:89 - Content Encoding :gzip
+2021-08-18 15:08:31 INFO  EmployeesRestAPI:107 - **************************Getting cookies***********************
+2021-08-18 15:08:31 INFO  EmployeesRestAPI:40 - **********Checking status code**************
+2021-08-18 15:08:31 INFO  EmployeesRestAPI:42 - Status Code:200
+2021-08-18 15:08:31 INFO  EmployeesRestAPI:115 - *****************Finished TC001_Get_All_Employees********************
+2021-09-18 15:09:40 INFO  EmployeesRestAPI:18 - ***************TC001_GET_ALL_EMPLOYEES STARTED******************
+2021-09-18 15:09:44 INFO  EmployeesRestAPI:95 - ******************************Checking content Lengrh******************
+2021-09-18 15:09:44 INFO  EmployeesRestAPI:97 - Content Length :null
+2021-09-18 15:09:44 INFO  EmployeesRestAPI:70 - ****************************Checking content Type**************
+2021-09-18 15:09:44 INFO  EmployeesRestAPI:72 - Content Type is application/json; charset=utf-8
+2021-09-18 15:09:44 INFO  EmployeesRestAPI:29 - ********************Checking Response Body **********************
+2021-09-18 15:09:44 INFO  EmployeesRestAPI:31 - ResponseBody :{"page":1,"per_page":6,"total":12,"total_pages":2,"data":[{"id":1,"email":"george.bluth@reqres.in","first_name":"George","last_name":"Bluth","avatar":"https://reqres.in/img/faces/1-image.jpg"},{"id":2,"email":"janet.weaver@reqres.in","first_name":"Janet","last_name":"Weaver","avatar":"https://reqres.in/img/faces/2-image.jpg"},{"id":3,"email":"emma.wong@reqres.in","first_name":"Emma","last_name":"Wong","avatar":"https://reqres.in/img/faces/3-image.jpg"},{"id":4,"email":"eve.holt@reqres.in","first_name":"Eve","last_name":"Holt","avatar":"https://reqres.in/img/faces/4-image.jpg"},{"id":5,"email":"charles.morris@reqres.in","first_name":"Charles","last_name":"Morris","avatar":"https://reqres.in/img/faces/5-image.jpg"},{"id":6,"email":"tracey.ramos@reqres.in","first_name":"Tracey","last_name":"Ramos","avatar":"https://reqres.in/img/faces/6-image.jpg"}],"support":{"url":"https://reqres.in/#support-heading","text":"To keep ReqRes free, contributions towards server costs are appreciated!"}}
+2021-09-18 15:09:44 INFO  EmployeesRestAPI:50 - *********************Checking Response Time***********************
+2021-09-18 15:09:44 INFO  EmployeesRestAPI:52 - Response Time :506
+2021-09-18 15:09:44 INFO  EmployeesRestAPI:62 - ***************************Status line****************************
+2021-09-18 15:09:44 INFO  EmployeesRestAPI:64 - Status line : HTTP/1.1 200 OK
+2021-09-18 15:09:44 INFO  EmployeesRestAPI:79 - ********************Server Type************************
+2021-09-18 15:09:44 INFO  EmployeesRestAPI:81 - Server type is:cloudflare
+2021-09-18 15:09:44 INFO  EmployeesRestAPI:87 - ***************************Checking content Encoding**************
+2021-09-18 15:09:44 INFO  EmployeesRestAPI:89 - Content Encoding :gzip
+2021-09-18 15:09:44 INFO  EmployeesRestAPI:107 - **************************Getting cookies***********************
+2021-09-18 15:09:44 INFO  EmployeesRestAPI:40 - **********Checking status code**************
+2021-09-18 15:09:44 INFO  EmployeesRestAPI:42 - Status Code:200
+2021-09-18 15:09:44 INFO  EmployeesRestAPI:115 - *****************Finished TC001_Get_All_Employees********************
+2021-10-18 15:10:38 INFO  EmployeesRestAPI:18 - ***************TC001_GET_ALL_EMPLOYEES STARTED******************
+2021-10-18 15:10:43 INFO  EmployeesRestAPI:95 - ******************************Checking content Lengrh******************
+2021-10-18 15:10:43 INFO  EmployeesRestAPI:97 - Content Length :null
+2021-10-18 15:10:43 INFO  EmployeesRestAPI:70 - ****************************Checking content Type**************
+2021-10-18 15:10:43 INFO  EmployeesRestAPI:72 - Content Type is application/json; charset=utf-8
+2021-10-18 15:10:43 INFO  EmployeesRestAPI:29 - ********************Checking Response Body **********************
+2021-10-18 15:10:43 INFO  EmployeesRestAPI:31 - ResponseBody :{"page":1,"per_page":6,"total":12,"total_pages":2,"data":[{"id":1,"email":"george.bluth@reqres.in","first_name":"George","last_name":"Bluth","avatar":"https://reqres.in/img/faces/1-image.jpg"},{"id":2,"email":"janet.weaver@reqres.in","first_name":"Janet","last_name":"Weaver","avatar":"https://reqres.in/img/faces/2-image.jpg"},{"id":3,"email":"emma.wong@reqres.in","first_name":"Emma","last_name":"Wong","avatar":"https://reqres.in/img/faces/3-image.jpg"},{"id":4,"email":"eve.holt@reqres.in","first_name":"Eve","last_name":"Holt","avatar":"https://reqres.in/img/faces/4-image.jpg"},{"id":5,"email":"charles.morris@reqres.in","first_name":"Charles","last_name":"Morris","avatar":"https://reqres.in/img/faces/5-image.jpg"},{"id":6,"email":"tracey.ramos@reqres.in","first_name":"Tracey","last_name":"Ramos","avatar":"https://reqres.in/img/faces/6-image.jpg"}],"support":{"url":"https://reqres.in/#support-heading","text":"To keep ReqRes free, contributions towards server costs are appreciated!"}}
+2021-10-18 15:10:43 INFO  EmployeesRestAPI:50 - *********************Checking Response Time***********************
+2021-10-18 15:10:43 INFO  EmployeesRestAPI:52 - Response Time :1014
+2021-10-18 15:10:43 INFO  EmployeesRestAPI:62 - ***************************Status line****************************
+2021-10-18 15:10:43 INFO  EmployeesRestAPI:64 - Status line : HTTP/1.1 200 OK
+2021-10-18 15:10:43 INFO  EmployeesRestAPI:79 - ********************Server Type************************
+2021-10-18 15:10:43 INFO  EmployeesRestAPI:81 - Server type is:cloudflare
+2021-10-18 15:10:43 INFO  EmployeesRestAPI:87 - ***************************Checking content Encoding**************
+2021-10-18 15:10:43 INFO  EmployeesRestAPI:89 - Content Encoding :gzip
+2021-10-18 15:10:43 INFO  EmployeesRestAPI:107 - **************************Getting cookies***********************
+2021-10-18 15:10:43 INFO  EmployeesRestAPI:40 - **********Checking status code**************
+2021-10-18 15:10:43 INFO  EmployeesRestAPI:42 - Status Code:200
+2021-10-18 15:10:43 INFO  EmployeesRestAPI:115 - *****************Finished TC001_Get_All_Employees********************
+2021-12-18 15:12:55 INFO  EmployeesRestAPI:18 - ***************TC001_GET_ALL_EMPLOYEES STARTED******************
+2021-12-18 15:12:59 INFO  EmployeesRestAPI:95 - ******************************Checking content Lengrh******************
+2021-12-18 15:12:59 INFO  EmployeesRestAPI:97 - Content Length :null
+2021-12-18 15:12:59 INFO  EmployeesRestAPI:70 - ****************************Checking content Type**************
+2021-12-18 15:12:59 INFO  EmployeesRestAPI:72 - Content Type is application/json; charset=utf-8
+2021-12-18 15:12:59 INFO  EmployeesRestAPI:29 - ********************Checking Response Body **********************
+2021-12-18 15:12:59 INFO  EmployeesRestAPI:31 - ResponseBody :{"page":1,"per_page":6,"total":12,"total_pages":2,"data":[{"id":1,"email":"george.bluth@reqres.in","first_name":"George","last_name":"Bluth","avatar":"https://reqres.in/img/faces/1-image.jpg"},{"id":2,"email":"janet.weaver@reqres.in","first_name":"Janet","last_name":"Weaver","avatar":"https://reqres.in/img/faces/2-image.jpg"},{"id":3,"email":"emma.wong@reqres.in","first_name":"Emma","last_name":"Wong","avatar":"https://reqres.in/img/faces/3-image.jpg"},{"id":4,"email":"eve.holt@reqres.in","first_name":"Eve","last_name":"Holt","avatar":"https://reqres.in/img/faces/4-image.jpg"},{"id":5,"email":"charles.morris@reqres.in","first_name":"Charles","last_name":"Morris","avatar":"https://reqres.in/img/faces/5-image.jpg"},{"id":6,"email":"tracey.ramos@reqres.in","first_name":"Tracey","last_name":"Ramos","avatar":"https://reqres.in/img/faces/6-image.jpg"}],"support":{"url":"https://reqres.in/#support-heading","text":"To keep ReqRes free, contributions towards server costs are appreciated!"}}
+2021-12-18 15:12:59 INFO  EmployeesRestAPI:50 - *********************Checking Response Time***********************
+2021-12-18 15:12:59 INFO  EmployeesRestAPI:52 - Response Time :474
+2021-12-18 15:12:59 INFO  EmployeesRestAPI:62 - ***************************Status line****************************
+2021-12-18 15:12:59 INFO  EmployeesRestAPI:64 - Status line : HTTP/1.1 200 OK
+2021-12-18 15:12:59 INFO  EmployeesRestAPI:79 - ********************Server Type************************
+2021-12-18 15:12:59 INFO  EmployeesRestAPI:81 - Server type is:cloudflare
+2021-12-18 15:12:59 INFO  EmployeesRestAPI:87 - ***************************Checking content Encoding**************
+2021-12-18 15:12:59 INFO  EmployeesRestAPI:89 - Content Encoding :gzip
+2021-12-18 15:12:59 INFO  EmployeesRestAPI:107 - **************************Getting cookies***********************
+2021-12-18 15:12:59 INFO  EmployeesRestAPI:40 - **********Checking status code**************
+2021-12-18 15:12:59 INFO  EmployeesRestAPI:42 - Status Code:200
+2021-12-18 15:12:59 INFO  EmployeesRestAPI:115 - *****************Finished TC001_Get_All_Employees********************
+2021-16-18 15:16:53 INFO  EmployeesRestAPI:18 - ***************TC001_GET_ALL_EMPLOYEES STARTED******************
+2021-16-18 15:16:58 INFO  EmployeesRestAPI:95 - ******************************Checking content Lengrh******************
+2021-16-18 15:16:58 INFO  EmployeesRestAPI:97 - Content Length :null
+2021-16-18 15:16:58 INFO  EmployeesRestAPI:70 - ****************************Checking content Type**************
+2021-16-18 15:16:58 INFO  EmployeesRestAPI:72 - Content Type is application/json; charset=utf-8
+2021-16-18 15:16:58 INFO  EmployeesRestAPI:29 - ********************Checking Response Body **********************
+2021-16-18 15:16:58 INFO  EmployeesRestAPI:31 - ResponseBody :{"page":1,"per_page":6,"total":12,"total_pages":2,"data":[{"id":1,"email":"george.bluth@reqres.in","first_name":"George","last_name":"Bluth","avatar":"https://reqres.in/img/faces/1-image.jpg"},{"id":2,"email":"janet.weaver@reqres.in","first_name":"Janet","last_name":"Weaver","avatar":"https://reqres.in/img/faces/2-image.jpg"},{"id":3,"email":"emma.wong@reqres.in","first_name":"Emma","last_name":"Wong","avatar":"https://reqres.in/img/faces/3-image.jpg"},{"id":4,"email":"eve.holt@reqres.in","first_name":"Eve","last_name":"Holt","avatar":"https://reqres.in/img/faces/4-image.jpg"},{"id":5,"email":"charles.morris@reqres.in","first_name":"Charles","last_name":"Morris","avatar":"https://reqres.in/img/faces/5-image.jpg"},{"id":6,"email":"tracey.ramos@reqres.in","first_name":"Tracey","last_name":"Ramos","avatar":"https://reqres.in/img/faces/6-image.jpg"}],"support":{"url":"https://reqres.in/#support-heading","text":"To keep ReqRes free, contributions towards server costs are appreciated!"}}
+2021-16-18 15:16:58 INFO  EmployeesRestAPI:50 - *********************Checking Response Time***********************
+2021-16-18 15:16:58 INFO  EmployeesRestAPI:52 - Response Time :592
+2021-16-18 15:16:58 INFO  EmployeesRestAPI:62 - ***************************Status line****************************
+2021-16-18 15:16:58 INFO  EmployeesRestAPI:64 - Status line : HTTP/1.1 200 OK
+2021-16-18 15:16:58 INFO  EmployeesRestAPI:79 - ********************Server Type************************
+2021-16-18 15:16:58 INFO  EmployeesRestAPI:81 - Server type is:cloudflare
+2021-16-18 15:16:58 INFO  EmployeesRestAPI:87 - ***************************Checking content Encoding**************
+2021-16-18 15:16:58 INFO  EmployeesRestAPI:89 - Content Encoding :gzip
+2021-16-18 15:16:58 INFO  EmployeesRestAPI:107 - **************************Getting cookies***********************
+2021-16-18 15:16:58 INFO  EmployeesRestAPI:40 - **********Checking status code**************
+2021-16-18 15:16:58 INFO  EmployeesRestAPI:42 - Status Code:200
+2021-16-18 15:16:58 INFO  EmployeesRestAPI:115 - *****************Finished TC001_Get_All_Employees********************
+2021-25-18 15:25:06 INFO  EmployeesRestAPI:18 - ***************TC001_GET_ALL_EMPLOYEES STARTED******************
+2021-25-18 15:25:10 INFO  EmployeesRestAPI:95 - ******************************Checking content Lengrh******************
+2021-25-18 15:25:10 INFO  EmployeesRestAPI:97 - Content Length :null
+2021-25-18 15:25:10 INFO  EmployeesRestAPI:70 - ****************************Checking content Type**************
+2021-25-18 15:25:10 INFO  EmployeesRestAPI:72 - Content Type is application/json; charset=utf-8
+2021-25-18 15:25:10 INFO  EmployeesRestAPI:29 - ********************Checking Response Body **********************
+2021-25-18 15:25:10 INFO  EmployeesRestAPI:31 - ResponseBody :{"page":1,"per_page":6,"total":12,"total_pages":2,"data":[{"id":1,"email":"george.bluth@reqres.in","first_name":"George","last_name":"Bluth","avatar":"https://reqres.in/img/faces/1-image.jpg"},{"id":2,"email":"janet.weaver@reqres.in","first_name":"Janet","last_name":"Weaver","avatar":"https://reqres.in/img/faces/2-image.jpg"},{"id":3,"email":"emma.wong@reqres.in","first_name":"Emma","last_name":"Wong","avatar":"https://reqres.in/img/faces/3-image.jpg"},{"id":4,"email":"eve.holt@reqres.in","first_name":"Eve","last_name":"Holt","avatar":"https://reqres.in/img/faces/4-image.jpg"},{"id":5,"email":"charles.morris@reqres.in","first_name":"Charles","last_name":"Morris","avatar":"https://reqres.in/img/faces/5-image.jpg"},{"id":6,"email":"tracey.ramos@reqres.in","first_name":"Tracey","last_name":"Ramos","avatar":"https://reqres.in/img/faces/6-image.jpg"}],"support":{"url":"https://reqres.in/#support-heading","text":"To keep ReqRes free, contributions towards server costs are appreciated!"}}
+2021-25-18 15:25:10 INFO  EmployeesRestAPI:50 - *********************Checking Response Time***********************
+2021-25-18 15:25:10 INFO  EmployeesRestAPI:52 - Response Time :471
+2021-25-18 15:25:10 INFO  EmployeesRestAPI:62 - ***************************Status line****************************
+2021-25-18 15:25:10 INFO  EmployeesRestAPI:64 - Status line : HTTP/1.1 200 OK
+2021-25-18 15:25:10 INFO  EmployeesRestAPI:79 - ********************Server Type************************
+2021-25-18 15:25:10 INFO  EmployeesRestAPI:81 - Server type is:cloudflare
+2021-25-18 15:25:10 INFO  EmployeesRestAPI:87 - ***************************Checking content Encoding**************
+2021-25-18 15:25:10 INFO  EmployeesRestAPI:89 - Content Encoding :gzip
+2021-25-18 15:25:10 INFO  EmployeesRestAPI:107 - **************************Getting cookies***********************
+2021-25-18 15:25:10 INFO  EmployeesRestAPI:40 - **********Checking status code**************
+2021-25-18 15:25:10 INFO  EmployeesRestAPI:42 - Status Code:200
+2021-25-18 15:25:10 INFO  EmployeesRestAPI:115 - *****************Finished TC001_Get_All_Employees********************
+2021-28-18 15:28:52 INFO  EmployeesRestAPI:18 - ***************TC001_GET_ALL_EMPLOYEES STARTED******************
+2021-28-18 15:28:56 INFO  EmployeesRestAPI:95 - ******************************Checking content Lengrh******************
+2021-28-18 15:28:56 INFO  EmployeesRestAPI:97 - Content Length :null
+2021-28-18 15:28:56 INFO  EmployeesRestAPI:70 - ****************************Checking content Type**************
+2021-28-18 15:28:56 INFO  EmployeesRestAPI:72 - Content Type is application/json; charset=utf-8
+2021-28-18 15:28:56 INFO  EmployeesRestAPI:29 - ********************Checking Response Body **********************
+2021-28-18 15:28:56 INFO  EmployeesRestAPI:31 - ResponseBody :{"page":1,"per_page":6,"total":12,"total_pages":2,"data":[{"id":1,"email":"george.bluth@reqres.in","first_name":"George","last_name":"Bluth","avatar":"https://reqres.in/img/faces/1-image.jpg"},{"id":2,"email":"janet.weaver@reqres.in","first_name":"Janet","last_name":"Weaver","avatar":"https://reqres.in/img/faces/2-image.jpg"},{"id":3,"email":"emma.wong@reqres.in","first_name":"Emma","last_name":"Wong","avatar":"https://reqres.in/img/faces/3-image.jpg"},{"id":4,"email":"eve.holt@reqres.in","first_name":"Eve","last_name":"Holt","avatar":"https://reqres.in/img/faces/4-image.jpg"},{"id":5,"email":"charles.morris@reqres.in","first_name":"Charles","last_name":"Morris","avatar":"https://reqres.in/img/faces/5-image.jpg"},{"id":6,"email":"tracey.ramos@reqres.in","first_name":"Tracey","last_name":"Ramos","avatar":"https://reqres.in/img/faces/6-image.jpg"}],"support":{"url":"https://reqres.in/#support-heading","text":"To keep ReqRes free, contributions towards server costs are appreciated!"}}
+2021-28-18 15:28:56 INFO  EmployeesRestAPI:50 - *********************Checking Response Time***********************
+2021-28-18 15:28:56 INFO  EmployeesRestAPI:52 - Response Time :448
+2021-28-18 15:28:56 INFO  EmployeesRestAPI:62 - ***************************Status line****************************
+2021-28-18 15:28:56 INFO  EmployeesRestAPI:64 - Status line : HTTP/1.1 200 OK
+2021-28-18 15:28:56 INFO  EmployeesRestAPI:79 - ********************Server Type************************
+2021-28-18 15:28:56 INFO  EmployeesRestAPI:81 - Server type is:cloudflare
+2021-28-18 15:28:56 INFO  EmployeesRestAPI:87 - ***************************Checking content Encoding**************
+2021-28-18 15:28:56 INFO  EmployeesRestAPI:89 - Content Encoding :gzip
+2021-28-18 15:28:56 INFO  EmployeesRestAPI:107 - **************************Getting cookies***********************
+2021-28-18 15:28:56 INFO  EmployeesRestAPI:40 - **********Checking status code**************
+2021-28-18 15:28:56 INFO  EmployeesRestAPI:42 - Status Code:200
+2021-28-18 15:28:56 INFO  EmployeesRestAPI:115 - *****************Finished TC001_Get_All_Employees********************
+2021-33-18 15:33:47 INFO  EmployeesRestAPI:18 - ***************TC001_GET_ALL_EMPLOYEES STARTED******************
+2021-33-18 15:33:52 INFO  EmployeesRestAPI:95 - ******************************Checking content Lengrh******************
+2021-33-18 15:33:52 INFO  EmployeesRestAPI:97 - Content Length :null
+2021-33-18 15:33:52 INFO  EmployeesRestAPI:70 - ****************************Checking content Type**************
+2021-33-18 15:33:52 INFO  EmployeesRestAPI:72 - Content Type is application/json; charset=utf-8
+2021-33-18 15:33:52 INFO  EmployeesRestAPI:29 - ********************Checking Response Body **********************
+2021-33-18 15:33:52 INFO  EmployeesRestAPI:31 - ResponseBody :{"page":1,"per_page":6,"total":12,"total_pages":2,"data":[{"id":1,"email":"george.bluth@reqres.in","first_name":"George","last_name":"Bluth","avatar":"https://reqres.in/img/faces/1-image.jpg"},{"id":2,"email":"janet.weaver@reqres.in","first_name":"Janet","last_name":"Weaver","avatar":"https://reqres.in/img/faces/2-image.jpg"},{"id":3,"email":"emma.wong@reqres.in","first_name":"Emma","last_name":"Wong","avatar":"https://reqres.in/img/faces/3-image.jpg"},{"id":4,"email":"eve.holt@reqres.in","first_name":"Eve","last_name":"Holt","avatar":"https://reqres.in/img/faces/4-image.jpg"},{"id":5,"email":"charles.morris@reqres.in","first_name":"Charles","last_name":"Morris","avatar":"https://reqres.in/img/faces/5-image.jpg"},{"id":6,"email":"tracey.ramos@reqres.in","first_name":"Tracey","last_name":"Ramos","avatar":"https://reqres.in/img/faces/6-image.jpg"}],"support":{"url":"https://reqres.in/#support-heading","text":"To keep ReqRes free, contributions towards server costs are appreciated!"}}
+2021-33-18 15:33:52 INFO  EmployeesRestAPI:50 - *********************Checking Response Time***********************
+2021-33-18 15:33:52 INFO  EmployeesRestAPI:52 - Response Time :551
+2021-33-18 15:33:52 INFO  EmployeesRestAPI:62 - ***************************Status line****************************
+2021-33-18 15:33:52 INFO  EmployeesRestAPI:64 - Status line : HTTP/1.1 200 OK
+2021-33-18 15:33:52 INFO  EmployeesRestAPI:79 - ********************Server Type************************
+2021-33-18 15:33:52 INFO  EmployeesRestAPI:81 - Server type is:cloudflare
+2021-33-18 15:33:52 INFO  EmployeesRestAPI:87 - ***************************Checking content Encoding**************
+2021-33-18 15:33:52 INFO  EmployeesRestAPI:89 - Content Encoding :gzip
+2021-33-18 15:33:52 INFO  EmployeesRestAPI:107 - **************************Getting cookies***********************
+2021-33-18 15:33:52 INFO  EmployeesRestAPI:40 - **********Checking status code**************
+2021-33-18 15:33:52 INFO  EmployeesRestAPI:42 - Status Code:200
+2021-33-18 15:33:52 INFO  EmployeesRestAPI:115 - *****************Finished TC001_Get_All_Employees********************
+2021-40-18 15:40:13 INFO  EmployeesRestAPI:18 - ***************TC001_GET_ALL_EMPLOYEES STARTED******************
+2021-40-18 15:40:17 INFO  EmployeesRestAPI:95 - ******************************Checking content Lengrh******************
+2021-40-18 15:40:17 INFO  EmployeesRestAPI:97 - Content Length :null
+2021-40-18 15:40:17 INFO  EmployeesRestAPI:70 - ****************************Checking content Type**************
+2021-40-18 15:40:17 INFO  EmployeesRestAPI:72 - Content Type is application/json; charset=utf-8
+2021-40-18 15:40:17 INFO  EmployeesRestAPI:29 - ********************Checking Response Body **********************
+2021-40-18 15:40:17 INFO  EmployeesRestAPI:31 - ResponseBody :{"page":1,"per_page":6,"total":12,"total_pages":2,"data":[{"id":1,"email":"george.bluth@reqres.in","first_name":"George","last_name":"Bluth","avatar":"https://reqres.in/img/faces/1-image.jpg"},{"id":2,"email":"janet.weaver@reqres.in","first_name":"Janet","last_name":"Weaver","avatar":"https://reqres.in/img/faces/2-image.jpg"},{"id":3,"email":"emma.wong@reqres.in","first_name":"Emma","last_name":"Wong","avatar":"https://reqres.in/img/faces/3-image.jpg"},{"id":4,"email":"eve.holt@reqres.in","first_name":"Eve","last_name":"Holt","avatar":"https://reqres.in/img/faces/4-image.jpg"},{"id":5,"email":"charles.morris@reqres.in","first_name":"Charles","last_name":"Morris","avatar":"https://reqres.in/img/faces/5-image.jpg"},{"id":6,"email":"tracey.ramos@reqres.in","first_name":"Tracey","last_name":"Ramos","avatar":"https://reqres.in/img/faces/6-image.jpg"}],"support":{"url":"https://reqres.in/#support-heading","text":"To keep ReqRes free, contributions towards server costs are appreciated!"}}
+2021-40-18 15:40:17 INFO  EmployeesRestAPI:50 - *********************Checking Response Time***********************
+2021-40-18 15:40:17 INFO  EmployeesRestAPI:52 - Response Time :494
+2021-40-18 15:40:17 INFO  EmployeesRestAPI:62 - ***************************Status line****************************
+2021-40-18 15:40:17 INFO  EmployeesRestAPI:64 - Status line : HTTP/1.1 200 OK
+2021-40-18 15:40:17 INFO  EmployeesRestAPI:79 - ********************Server Type************************
+2021-40-18 15:40:17 INFO  EmployeesRestAPI:81 - Server type is:cloudflare
+2021-40-18 15:40:17 INFO  EmployeesRestAPI:87 - ***************************Checking content Encoding**************
+2021-40-18 15:40:17 INFO  EmployeesRestAPI:89 - Content Encoding :gzip
+2021-40-18 15:40:17 INFO  EmployeesRestAPI:107 - **************************Getting cookies***********************
+2021-40-18 15:40:17 INFO  EmployeesRestAPI:40 - **********Checking status code**************
+2021-40-18 15:40:17 INFO  EmployeesRestAPI:42 - Status Code:200
+2021-40-18 15:40:17 INFO  EmployeesRestAPI:115 - *****************Finished TC001_Get_All_Employees********************
+2021-43-18 15:43:21 INFO  EmployeesRestAPI:18 - ***************TC001_GET_ALL_EMPLOYEES STARTED******************
+2021-43-18 15:43:26 INFO  EmployeesRestAPI:95 - ******************************Checking content Lengrh******************
+2021-43-18 15:43:26 INFO  EmployeesRestAPI:97 - Content Length :null
+2021-43-18 15:43:26 INFO  EmployeesRestAPI:70 - ****************************Checking content Type**************
+2021-43-18 15:43:26 INFO  EmployeesRestAPI:72 - Content Type is application/json; charset=utf-8
+2021-43-18 15:43:26 INFO  EmployeesRestAPI:29 - ********************Checking Response Body **********************
+2021-43-18 15:43:26 INFO  EmployeesRestAPI:31 - ResponseBody :{"page":1,"per_page":6,"total":12,"total_pages":2,"data":[{"id":1,"email":"george.bluth@reqres.in","first_name":"George","last_name":"Bluth","avatar":"https://reqres.in/img/faces/1-image.jpg"},{"id":2,"email":"janet.weaver@reqres.in","first_name":"Janet","last_name":"Weaver","avatar":"https://reqres.in/img/faces/2-image.jpg"},{"id":3,"email":"emma.wong@reqres.in","first_name":"Emma","last_name":"Wong","avatar":"https://reqres.in/img/faces/3-image.jpg"},{"id":4,"email":"eve.holt@reqres.in","first_name":"Eve","last_name":"Holt","avatar":"https://reqres.in/img/faces/4-image.jpg"},{"id":5,"email":"charles.morris@reqres.in","first_name":"Charles","last_name":"Morris","avatar":"https://reqres.in/img/faces/5-image.jpg"},{"id":6,"email":"tracey.ramos@reqres.in","first_name":"Tracey","last_name":"Ramos","avatar":"https://reqres.in/img/faces/6-image.jpg"}],"support":{"url":"https://reqres.in/#support-heading","text":"To keep ReqRes free, contributions towards server costs are appreciated!"}}
+2021-43-18 15:43:26 INFO  EmployeesRestAPI:50 - *********************Checking Response Time***********************
+2021-43-18 15:43:26 INFO  EmployeesRestAPI:52 - Response Time :477
+2021-43-18 15:43:26 INFO  EmployeesRestAPI:62 - ***************************Status line****************************
+2021-43-18 15:43:26 INFO  EmployeesRestAPI:64 - Status line : HTTP/1.1 200 OK
+2021-43-18 15:43:26 INFO  EmployeesRestAPI:79 - ********************Server Type************************
+2021-43-18 15:43:26 INFO  EmployeesRestAPI:81 - Server type is:cloudflare
+2021-43-18 15:43:26 INFO  EmployeesRestAPI:87 - ***************************Checking content Encoding**************
+2021-43-18 15:43:26 INFO  EmployeesRestAPI:89 - Content Encoding :gzip
+2021-43-18 15:43:26 INFO  EmployeesRestAPI:107 - **************************Getting cookies***********************
+2021-43-18 15:43:26 INFO  EmployeesRestAPI:40 - **********Checking status code**************
+2021-43-18 15:43:26 INFO  EmployeesRestAPI:42 - Status Code:200
+2021-43-18 15:43:26 INFO  EmployeesRestAPI:115 - *****************Finished TC001_Get_All_Employees********************
+2021-48-18 15:48:20 INFO  EmployeesRestAPI:18 - ***************TC001_GET_ALL_EMPLOYEES STARTED******************
+2021-48-18 15:48:24 INFO  EmployeesRestAPI:95 - ******************************Checking content Lengrh******************
+2021-48-18 15:48:24 INFO  EmployeesRestAPI:97 - Content Length :null
+2021-48-18 15:48:24 INFO  EmployeesRestAPI:70 - ****************************Checking content Type**************
+2021-48-18 15:48:24 INFO  EmployeesRestAPI:72 - Content Type is application/json; charset=utf-8
+2021-48-18 15:48:24 INFO  EmployeesRestAPI:29 - ********************Checking Response Body **********************
+2021-48-18 15:48:24 INFO  EmployeesRestAPI:31 - ResponseBody :{"page":1,"per_page":6,"total":12,"total_pages":2,"data":[{"id":1,"email":"george.bluth@reqres.in","first_name":"George","last_name":"Bluth","avatar":"https://reqres.in/img/faces/1-image.jpg"},{"id":2,"email":"janet.weaver@reqres.in","first_name":"Janet","last_name":"Weaver","avatar":"https://reqres.in/img/faces/2-image.jpg"},{"id":3,"email":"emma.wong@reqres.in","first_name":"Emma","last_name":"Wong","avatar":"https://reqres.in/img/faces/3-image.jpg"},{"id":4,"email":"eve.holt@reqres.in","first_name":"Eve","last_name":"Holt","avatar":"https://reqres.in/img/faces/4-image.jpg"},{"id":5,"email":"charles.morris@reqres.in","first_name":"Charles","last_name":"Morris","avatar":"https://reqres.in/img/faces/5-image.jpg"},{"id":6,"email":"tracey.ramos@reqres.in","first_name":"Tracey","last_name":"Ramos","avatar":"https://reqres.in/img/faces/6-image.jpg"}],"support":{"url":"https://reqres.in/#support-heading","text":"To keep ReqRes free, contributions towards server costs are appreciated!"}}
+2021-48-18 15:48:24 INFO  EmployeesRestAPI:50 - *********************Checking Response Time***********************
+2021-48-18 15:48:24 INFO  EmployeesRestAPI:52 - Response Time :585
+2021-48-18 15:48:24 INFO  EmployeesRestAPI:62 - ***************************Status line****************************
+2021-48-18 15:48:24 INFO  EmployeesRestAPI:64 - Status line : HTTP/1.1 200 OK
+2021-48-18 15:48:24 INFO  EmployeesRestAPI:79 - ********************Server Type************************
+2021-48-18 15:48:24 INFO  EmployeesRestAPI:81 - Server type is:cloudflare
+2021-48-18 15:48:24 INFO  EmployeesRestAPI:87 - ***************************Checking content Encoding**************
+2021-48-18 15:48:24 INFO  EmployeesRestAPI:89 - Content Encoding :gzip
+2021-48-18 15:48:24 INFO  EmployeesRestAPI:107 - **************************Getting cookies***********************
+2021-48-18 15:48:24 INFO  EmployeesRestAPI:40 - **********Checking status code**************
+2021-48-18 15:48:24 INFO  EmployeesRestAPI:42 - Status Code:200
+2021-48-18 15:48:24 INFO  EmployeesRestAPI:115 - *****************Finished TC001_Get_All_Employees********************
+2021-49-18 15:49:49 INFO  EmployeesRestAPI:18 - ***************TC001_GET_ALL_EMPLOYEES STARTED******************
+2021-49-18 15:49:53 INFO  EmployeesRestAPI:95 - ******************************Checking content Lengrh******************
+2021-49-18 15:49:53 INFO  EmployeesRestAPI:97 - Content Length :null
+2021-49-18 15:49:53 INFO  EmployeesRestAPI:70 - ****************************Checking content Type**************
+2021-49-18 15:49:53 INFO  EmployeesRestAPI:72 - Content Type is application/json; charset=utf-8
+2021-49-18 15:49:53 INFO  EmployeesRestAPI:29 - ********************Checking Response Body **********************
+2021-49-18 15:49:53 INFO  EmployeesRestAPI:31 - ResponseBody :{"page":1,"per_page":6,"total":12,"total_pages":2,"data":[{"id":1,"email":"george.bluth@reqres.in","first_name":"George","last_name":"Bluth","avatar":"https://reqres.in/img/faces/1-image.jpg"},{"id":2,"email":"janet.weaver@reqres.in","first_name":"Janet","last_name":"Weaver","avatar":"https://reqres.in/img/faces/2-image.jpg"},{"id":3,"email":"emma.wong@reqres.in","first_name":"Emma","last_name":"Wong","avatar":"https://reqres.in/img/faces/3-image.jpg"},{"id":4,"email":"eve.holt@reqres.in","first_name":"Eve","last_name":"Holt","avatar":"https://reqres.in/img/faces/4-image.jpg"},{"id":5,"email":"charles.morris@reqres.in","first_name":"Charles","last_name":"Morris","avatar":"https://reqres.in/img/faces/5-image.jpg"},{"id":6,"email":"tracey.ramos@reqres.in","first_name":"Tracey","last_name":"Ramos","avatar":"https://reqres.in/img/faces/6-image.jpg"}],"support":{"url":"https://reqres.in/#support-heading","text":"To keep ReqRes free, contributions towards server costs are appreciated!"}}
+2021-49-18 15:49:53 INFO  EmployeesRestAPI:50 - *********************Checking Response Time***********************
+2021-49-18 15:49:53 INFO  EmployeesRestAPI:52 - Response Time :444
+2021-49-18 15:49:53 INFO  EmployeesRestAPI:62 - ***************************Status line****************************
+2021-49-18 15:49:53 INFO  EmployeesRestAPI:64 - Status line : HTTP/1.1 200 OK
+2021-49-18 15:49:53 INFO  EmployeesRestAPI:79 - ********************Server Type************************
+2021-49-18 15:49:53 INFO  EmployeesRestAPI:81 - Server type is:cloudflare
+2021-49-18 15:49:53 INFO  EmployeesRestAPI:87 - ***************************Checking content Encoding**************
+2021-49-18 15:49:53 INFO  EmployeesRestAPI:89 - Content Encoding :gzip
+2021-49-18 15:49:53 INFO  EmployeesRestAPI:107 - **************************Getting cookies***********************
+2021-49-18 15:49:53 INFO  EmployeesRestAPI:40 - **********Checking status code**************
+2021-49-18 15:49:53 INFO  EmployeesRestAPI:42 - Status Code:200
+2021-49-18 15:49:53 INFO  EmployeesRestAPI:115 - *****************Finished TC001_Get_All_Employees********************
+2021-02-18 16:02:44 INFO  EmployeesRestAPI:18 - ***************TC001_GET_ALL_EMPLOYEES STARTED******************
+2021-02-18 16:02:48 INFO  EmployeesRestAPI:95 - ******************************Checking content Lengrh******************
+2021-02-18 16:02:48 INFO  EmployeesRestAPI:97 - Content Length :null
+2021-02-18 16:02:48 INFO  EmployeesRestAPI:70 - ****************************Checking content Type**************
+2021-02-18 16:02:48 INFO  EmployeesRestAPI:72 - Content Type is application/json; charset=utf-8
+2021-02-18 16:02:48 INFO  EmployeesRestAPI:29 - ********************Checking Response Body **********************
+2021-02-18 16:02:48 INFO  EmployeesRestAPI:31 - ResponseBody :{"page":1,"per_page":6,"total":12,"total_pages":2,"data":[{"id":1,"email":"george.bluth@reqres.in","first_name":"George","last_name":"Bluth","avatar":"https://reqres.in/img/faces/1-image.jpg"},{"id":2,"email":"janet.weaver@reqres.in","first_name":"Janet","last_name":"Weaver","avatar":"https://reqres.in/img/faces/2-image.jpg"},{"id":3,"email":"emma.wong@reqres.in","first_name":"Emma","last_name":"Wong","avatar":"https://reqres.in/img/faces/3-image.jpg"},{"id":4,"email":"eve.holt@reqres.in","first_name":"Eve","last_name":"Holt","avatar":"https://reqres.in/img/faces/4-image.jpg"},{"id":5,"email":"charles.morris@reqres.in","first_name":"Charles","last_name":"Morris","avatar":"https://reqres.in/img/faces/5-image.jpg"},{"id":6,"email":"tracey.ramos@reqres.in","first_name":"Tracey","last_name":"Ramos","avatar":"https://reqres.in/img/faces/6-image.jpg"}],"support":{"url":"https://reqres.in/#support-heading","text":"To keep ReqRes free, contributions towards server costs are appreciated!"}}
+2021-02-18 16:02:48 INFO  EmployeesRestAPI:50 - *********************Checking Response Time***********************
+2021-02-18 16:02:48 INFO  EmployeesRestAPI:52 - Response Time :484
+2021-02-18 16:02:48 INFO  EmployeesRestAPI:62 - ***************************Status line****************************
+2021-02-18 16:02:48 INFO  EmployeesRestAPI:64 - Status line : HTTP/1.1 200 OK
+2021-02-18 16:02:48 INFO  EmployeesRestAPI:79 - ********************Server Type************************
+2021-02-18 16:02:48 INFO  EmployeesRestAPI:81 - Server type is:cloudflare
+2021-02-18 16:02:48 INFO  EmployeesRestAPI:87 - ***************************Checking content Encoding**************
+2021-02-18 16:02:48 INFO  EmployeesRestAPI:89 - Content Encoding :gzip
+2021-02-18 16:02:48 INFO  EmployeesRestAPI:107 - **************************Getting cookies***********************
+2021-02-18 16:02:48 INFO  EmployeesRestAPI:40 - **********Checking status code**************
+2021-02-18 16:02:48 INFO  EmployeesRestAPI:42 - Status Code:200
+2021-02-18 16:02:48 INFO  EmployeesRestAPI:115 - *****************Finished TC001_Get_All_Employees********************
+2021-04-18 16:04:34 INFO  EmployeesRestAPI:18 - ***************TC001_GET_ALL_EMPLOYEES STARTED******************
+2021-04-18 16:04:38 INFO  EmployeesRestAPI:95 - ******************************Checking content Lengrh******************
+2021-04-18 16:04:38 INFO  EmployeesRestAPI:97 - Content Length :null
+2021-04-18 16:04:38 INFO  EmployeesRestAPI:70 - ****************************Checking content Type**************
+2021-04-18 16:04:38 INFO  EmployeesRestAPI:72 - Content Type is application/json; charset=utf-8
+2021-04-18 16:04:38 INFO  EmployeesRestAPI:29 - ********************Checking Response Body **********************
+2021-04-18 16:04:38 INFO  EmployeesRestAPI:31 - ResponseBody :{"page":1,"per_page":6,"total":12,"total_pages":2,"data":[{"id":1,"email":"george.bluth@reqres.in","first_name":"George","last_name":"Bluth","avatar":"https://reqres.in/img/faces/1-image.jpg"},{"id":2,"email":"janet.weaver@reqres.in","first_name":"Janet","last_name":"Weaver","avatar":"https://reqres.in/img/faces/2-image.jpg"},{"id":3,"email":"emma.wong@reqres.in","first_name":"Emma","last_name":"Wong","avatar":"https://reqres.in/img/faces/3-image.jpg"},{"id":4,"email":"eve.holt@reqres.in","first_name":"Eve","last_name":"Holt","avatar":"https://reqres.in/img/faces/4-image.jpg"},{"id":5,"email":"charles.morris@reqres.in","first_name":"Charles","last_name":"Morris","avatar":"https://reqres.in/img/faces/5-image.jpg"},{"id":6,"email":"tracey.ramos@reqres.in","first_name":"Tracey","last_name":"Ramos","avatar":"https://reqres.in/img/faces/6-image.jpg"}],"support":{"url":"https://reqres.in/#support-heading","text":"To keep ReqRes free, contributions towards server costs are appreciated!"}}
+2021-04-18 16:04:38 INFO  EmployeesRestAPI:50 - *********************Checking Response Time***********************
+2021-04-18 16:04:38 INFO  EmployeesRestAPI:52 - Response Time :457
+2021-04-18 16:04:38 INFO  EmployeesRestAPI:62 - ***************************Status line****************************
+2021-04-18 16:04:38 INFO  EmployeesRestAPI:64 - Status line : HTTP/1.1 200 OK
+2021-04-18 16:04:38 INFO  EmployeesRestAPI:79 - ********************Server Type************************
+2021-04-18 16:04:38 INFO  EmployeesRestAPI:81 - Server type is:cloudflare
+2021-04-18 16:04:38 INFO  EmployeesRestAPI:87 - ***************************Checking content Encoding**************
+2021-04-18 16:04:38 INFO  EmployeesRestAPI:89 - Content Encoding :gzip
+2021-04-18 16:04:38 INFO  EmployeesRestAPI:107 - **************************Getting cookies***********************
+2021-04-18 16:04:38 INFO  EmployeesRestAPI:40 - **********Checking status code**************
+2021-04-18 16:04:38 INFO  EmployeesRestAPI:42 - Status Code:200
+2021-04-18 16:04:38 INFO  EmployeesRestAPI:115 - *****************Finished TC001_Get_All_Employees********************
+2021-16-18 16:16:25 INFO  EmployeesRestAPI:18 - ***************TC001_GET_ALL_EMPLOYEES STARTED******************
+2021-16-18 16:16:30 INFO  EmployeesRestAPI:95 - ******************************Checking content Lengrh******************
+2021-16-18 16:16:30 INFO  EmployeesRestAPI:97 - Content Length :null
+2021-16-18 16:16:30 INFO  EmployeesRestAPI:70 - ****************************Checking content Type**************
+2021-16-18 16:16:30 INFO  EmployeesRestAPI:72 - Content Type is application/json; charset=utf-8
+2021-16-18 16:16:30 INFO  EmployeesRestAPI:29 - ********************Checking Response Body **********************
+2021-16-18 16:16:30 INFO  EmployeesRestAPI:31 - ResponseBody :{"page":1,"per_page":6,"total":12,"total_pages":2,"data":[{"id":1,"email":"george.bluth@reqres.in","first_name":"George","last_name":"Bluth","avatar":"https://reqres.in/img/faces/1-image.jpg"},{"id":2,"email":"janet.weaver@reqres.in","first_name":"Janet","last_name":"Weaver","avatar":"https://reqres.in/img/faces/2-image.jpg"},{"id":3,"email":"emma.wong@reqres.in","first_name":"Emma","last_name":"Wong","avatar":"https://reqres.in/img/faces/3-image.jpg"},{"id":4,"email":"eve.holt@reqres.in","first_name":"Eve","last_name":"Holt","avatar":"https://reqres.in/img/faces/4-image.jpg"},{"id":5,"email":"charles.morris@reqres.in","first_name":"Charles","last_name":"Morris","avatar":"https://reqres.in/img/faces/5-image.jpg"},{"id":6,"email":"tracey.ramos@reqres.in","first_name":"Tracey","last_name":"Ramos","avatar":"https://reqres.in/img/faces/6-image.jpg"}],"support":{"url":"https://reqres.in/#support-heading","text":"To keep ReqRes free, contributions towards server costs are appreciated!"}}
+2021-16-18 16:16:30 INFO  EmployeesRestAPI:50 - *********************Checking Response Time***********************
+2021-16-18 16:16:30 INFO  EmployeesRestAPI:52 - Response Time :612
+2021-16-18 16:16:30 INFO  EmployeesRestAPI:62 - ***************************Status line****************************
+2021-16-18 16:16:30 INFO  EmployeesRestAPI:64 - Status line : HTTP/1.1 200 OK
+2021-16-18 16:16:30 INFO  EmployeesRestAPI:79 - ********************Server Type************************
+2021-16-18 16:16:30 INFO  EmployeesRestAPI:81 - Server type is:cloudflare
+2021-16-18 16:16:30 INFO  EmployeesRestAPI:87 - ***************************Checking content Encoding**************
+2021-16-18 16:16:30 INFO  EmployeesRestAPI:89 - Content Encoding :gzip
+2021-16-18 16:16:30 INFO  EmployeesRestAPI:107 - **************************Getting cookies***********************
+2021-16-18 16:16:30 INFO  EmployeesRestAPI:40 - **********Checking status code**************
+2021-16-18 16:16:30 INFO  EmployeesRestAPI:42 - Status Code:200
+2021-16-18 16:16:30 INFO  EmployeesRestAPI:115 - *****************Finished TC001_Get_All_Employees********************
+2021-20-18 16:20:33 INFO  EmployeesRestAPI:18 - ***************TC001_GET_ALL_EMPLOYEES STARTED******************
+2021-20-18 16:20:37 INFO  EmployeesRestAPI:95 - ******************************Checking content Lengrh******************
+2021-20-18 16:20:37 INFO  EmployeesRestAPI:97 - Content Length :null
+2021-20-18 16:20:37 INFO  EmployeesRestAPI:70 - ****************************Checking content Type**************
+2021-20-18 16:20:37 INFO  EmployeesRestAPI:72 - Content Type is application/json; charset=utf-8
+2021-20-18 16:20:37 INFO  EmployeesRestAPI:29 - ********************Checking Response Body **********************
+2021-20-18 16:20:37 INFO  EmployeesRestAPI:31 - ResponseBody :{"page":1,"per_page":6,"total":12,"total_pages":2,"data":[{"id":1,"email":"george.bluth@reqres.in","first_name":"George","last_name":"Bluth","avatar":"https://reqres.in/img/faces/1-image.jpg"},{"id":2,"email":"janet.weaver@reqres.in","first_name":"Janet","last_name":"Weaver","avatar":"https://reqres.in/img/faces/2-image.jpg"},{"id":3,"email":"emma.wong@reqres.in","first_name":"Emma","last_name":"Wong","avatar":"https://reqres.in/img/faces/3-image.jpg"},{"id":4,"email":"eve.holt@reqres.in","first_name":"Eve","last_name":"Holt","avatar":"https://reqres.in/img/faces/4-image.jpg"},{"id":5,"email":"charles.morris@reqres.in","first_name":"Charles","last_name":"Morris","avatar":"https://reqres.in/img/faces/5-image.jpg"},{"id":6,"email":"tracey.ramos@reqres.in","first_name":"Tracey","last_name":"Ramos","avatar":"https://reqres.in/img/faces/6-image.jpg"}],"support":{"url":"https://reqres.in/#support-heading","text":"To keep ReqRes free, contributions towards server costs are appreciated!"}}
+2021-20-18 16:20:37 INFO  EmployeesRestAPI:50 - *********************Checking Response Time***********************
+2021-20-18 16:20:37 INFO  EmployeesRestAPI:52 - Response Time :593
+2021-20-18 16:20:37 INFO  EmployeesRestAPI:62 - ***************************Status line****************************
+2021-20-18 16:20:37 INFO  EmployeesRestAPI:64 - Status line : HTTP/1.1 200 OK
+2021-20-18 16:20:37 INFO  EmployeesRestAPI:79 - ********************Server Type************************
+2021-20-18 16:20:37 INFO  EmployeesRestAPI:81 - Server type is:cloudflare
+2021-20-18 16:20:37 INFO  EmployeesRestAPI:87 - ***************************Checking content Encoding**************
+2021-20-18 16:20:37 INFO  EmployeesRestAPI:89 - Content Encoding :gzip
+2021-20-18 16:20:37 INFO  EmployeesRestAPI:107 - **************************Getting cookies***********************
+2021-20-18 16:20:37 INFO  EmployeesRestAPI:40 - **********Checking status code**************
+2021-20-18 16:20:37 INFO  EmployeesRestAPI:42 - Status Code:200
+2021-20-18 16:20:37 INFO  EmployeesRestAPI:115 - *****************Finished TC001_Get_All_Employees********************
+2021-24-18 16:24:19 INFO  EmployeesRestAPI:18 - ***************TC001_GET_ALL_EMPLOYEES STARTED******************
+2021-24-18 16:24:24 INFO  EmployeesRestAPI:95 - ******************************Checking content Lengrh******************
+2021-24-18 16:24:24 INFO  EmployeesRestAPI:97 - Content Length :null
+2021-24-18 16:24:24 INFO  EmployeesRestAPI:70 - ****************************Checking content Type**************
+2021-24-18 16:24:24 INFO  EmployeesRestAPI:72 - Content Type is application/json; charset=utf-8
+2021-24-18 16:24:24 INFO  EmployeesRestAPI:29 - ********************Checking Response Body **********************
+2021-24-18 16:24:24 INFO  EmployeesRestAPI:31 - ResponseBody :{"page":1,"per_page":6,"total":12,"total_pages":2,"data":[{"id":1,"email":"george.bluth@reqres.in","first_name":"George","last_name":"Bluth","avatar":"https://reqres.in/img/faces/1-image.jpg"},{"id":2,"email":"janet.weaver@reqres.in","first_name":"Janet","last_name":"Weaver","avatar":"https://reqres.in/img/faces/2-image.jpg"},{"id":3,"email":"emma.wong@reqres.in","first_name":"Emma","last_name":"Wong","avatar":"https://reqres.in/img/faces/3-image.jpg"},{"id":4,"email":"eve.holt@reqres.in","first_name":"Eve","last_name":"Holt","avatar":"https://reqres.in/img/faces/4-image.jpg"},{"id":5,"email":"charles.morris@reqres.in","first_name":"Charles","last_name":"Morris","avatar":"https://reqres.in/img/faces/5-image.jpg"},{"id":6,"email":"tracey.ramos@reqres.in","first_name":"Tracey","last_name":"Ramos","avatar":"https://reqres.in/img/faces/6-image.jpg"}],"support":{"url":"https://reqres.in/#support-heading","text":"To keep ReqRes free, contributions towards server costs are appreciated!"}}
+2021-24-18 16:24:24 INFO  EmployeesRestAPI:50 - *********************Checking Response Time***********************
+2021-24-18 16:24:24 INFO  EmployeesRestAPI:52 - Response Time :692
+2021-24-18 16:24:24 INFO  EmployeesRestAPI:62 - ***************************Status line****************************
+2021-24-18 16:24:24 INFO  EmployeesRestAPI:64 - Status line : HTTP/1.1 200 OK
+2021-24-18 16:24:24 INFO  EmployeesRestAPI:79 - ********************Server Type************************
+2021-24-18 16:24:24 INFO  EmployeesRestAPI:81 - Server type is:cloudflare
+2021-24-18 16:24:24 INFO  EmployeesRestAPI:87 - ***************************Checking content Encoding**************
+2021-24-18 16:24:24 INFO  EmployeesRestAPI:89 - Content Encoding :gzip
+2021-24-18 16:24:24 INFO  EmployeesRestAPI:107 - **************************Getting cookies***********************
+2021-24-18 16:24:24 INFO  EmployeesRestAPI:40 - **********Checking status code**************
+2021-24-18 16:24:24 INFO  EmployeesRestAPI:42 - Status Code:200
+2021-24-18 16:24:24 INFO  EmployeesRestAPI:115 - *****************Finished TC001_Get_All_Employees********************
+2021-30-18 16:30:28 INFO  EmployeesRestAPI:18 - ***************TC001_GET_ALL_EMPLOYEES STARTED******************
+2021-30-18 16:30:33 INFO  EmployeesRestAPI:95 - ******************************Checking content Lengrh******************
+2021-30-18 16:30:33 INFO  EmployeesRestAPI:97 - Content Length :null
+2021-30-18 16:30:33 INFO  EmployeesRestAPI:70 - ****************************Checking content Type**************
+2021-30-18 16:30:33 INFO  EmployeesRestAPI:72 - Content Type is application/json; charset=utf-8
+2021-30-18 16:30:33 INFO  EmployeesRestAPI:29 - ********************Checking Response Body **********************
+2021-30-18 16:30:33 INFO  EmployeesRestAPI:31 - ResponseBody :{"page":1,"per_page":6,"total":12,"total_pages":2,"data":[{"id":1,"email":"george.bluth@reqres.in","first_name":"George","last_name":"Bluth","avatar":"https://reqres.in/img/faces/1-image.jpg"},{"id":2,"email":"janet.weaver@reqres.in","first_name":"Janet","last_name":"Weaver","avatar":"https://reqres.in/img/faces/2-image.jpg"},{"id":3,"email":"emma.wong@reqres.in","first_name":"Emma","last_name":"Wong","avatar":"https://reqres.in/img/faces/3-image.jpg"},{"id":4,"email":"eve.holt@reqres.in","first_name":"Eve","last_name":"Holt","avatar":"https://reqres.in/img/faces/4-image.jpg"},{"id":5,"email":"charles.morris@reqres.in","first_name":"Charles","last_name":"Morris","avatar":"https://reqres.in/img/faces/5-image.jpg"},{"id":6,"email":"tracey.ramos@reqres.in","first_name":"Tracey","last_name":"Ramos","avatar":"https://reqres.in/img/faces/6-image.jpg"}],"support":{"url":"https://reqres.in/#support-heading","text":"To keep ReqRes free, contributions towards server costs are appreciated!"}}
+2021-30-18 16:30:33 INFO  EmployeesRestAPI:50 - *********************Checking Response Time***********************
+2021-30-18 16:30:33 INFO  EmployeesRestAPI:52 - Response Time :640
+2021-30-18 16:30:33 INFO  EmployeesRestAPI:62 - ***************************Status line****************************
+2021-30-18 16:30:33 INFO  EmployeesRestAPI:64 - Status line : HTTP/1.1 200 OK
+2021-30-18 16:30:33 INFO  EmployeesRestAPI:79 - ********************Server Type************************
+2021-30-18 16:30:33 INFO  EmployeesRestAPI:81 - Server type is:cloudflare
+2021-30-18 16:30:33 INFO  EmployeesRestAPI:87 - ***************************Checking content Encoding**************
+2021-30-18 16:30:33 INFO  EmployeesRestAPI:89 - Content Encoding :gzip
+2021-30-18 16:30:33 INFO  EmployeesRestAPI:107 - **************************Getting cookies***********************
+2021-30-18 16:30:33 INFO  EmployeesRestAPI:40 - **********Checking status code**************
+2021-30-18 16:30:33 INFO  EmployeesRestAPI:42 - Status Code:200
+2021-30-18 16:30:33 INFO  EmployeesRestAPI:115 - *****************Finished TC001_Get_All_Employees********************
+2021-38-18 16:38:04 INFO  EmployeesRestAPI:18 - ***************TC001_GET_ALL_EMPLOYEES STARTED******************
+2021-38-18 16:38:09 INFO  EmployeesRestAPI:95 - ******************************Checking content Lengrh******************
+2021-38-18 16:38:09 INFO  EmployeesRestAPI:97 - Content Length :null
+2021-38-18 16:38:09 INFO  EmployeesRestAPI:70 - ****************************Checking content Type**************
+2021-38-18 16:38:09 INFO  EmployeesRestAPI:72 - Content Type is application/json; charset=utf-8
+2021-38-18 16:38:09 INFO  EmployeesRestAPI:29 - ********************Checking Response Body **********************
+2021-38-18 16:38:09 INFO  EmployeesRestAPI:31 - ResponseBody :{"page":1,"per_page":6,"total":12,"total_pages":2,"data":[{"id":1,"email":"george.bluth@reqres.in","first_name":"George","last_name":"Bluth","avatar":"https://reqres.in/img/faces/1-image.jpg"},{"id":2,"email":"janet.weaver@reqres.in","first_name":"Janet","last_name":"Weaver","avatar":"https://reqres.in/img/faces/2-image.jpg"},{"id":3,"email":"emma.wong@reqres.in","first_name":"Emma","last_name":"Wong","avatar":"https://reqres.in/img/faces/3-image.jpg"},{"id":4,"email":"eve.holt@reqres.in","first_name":"Eve","last_name":"Holt","avatar":"https://reqres.in/img/faces/4-image.jpg"},{"id":5,"email":"charles.morris@reqres.in","first_name":"Charles","last_name":"Morris","avatar":"https://reqres.in/img/faces/5-image.jpg"},{"id":6,"email":"tracey.ramos@reqres.in","first_name":"Tracey","last_name":"Ramos","avatar":"https://reqres.in/img/faces/6-image.jpg"}],"support":{"url":"https://reqres.in/#support-heading","text":"To keep ReqRes free, contributions towards server costs are appreciated!"}}
+2021-38-18 16:38:09 INFO  EmployeesRestAPI:50 - *********************Checking Response Time***********************
+2021-38-18 16:38:09 INFO  EmployeesRestAPI:52 - Response Time :592
+2021-38-18 16:38:09 INFO  EmployeesRestAPI:62 - ***************************Status line****************************
+2021-38-18 16:38:09 INFO  EmployeesRestAPI:64 - Status line : HTTP/1.1 200 OK
+2021-38-18 16:38:09 INFO  EmployeesRestAPI:79 - ********************Server Type************************
+2021-38-18 16:38:09 INFO  EmployeesRestAPI:81 - Server type is:cloudflare
+2021-38-18 16:38:09 INFO  EmployeesRestAPI:87 - ***************************Checking content Encoding**************
+2021-38-18 16:38:09 INFO  EmployeesRestAPI:89 - Content Encoding :gzip
+2021-38-18 16:38:09 INFO  EmployeesRestAPI:107 - **************************Getting cookies***********************
+2021-38-18 16:38:09 INFO  EmployeesRestAPI:40 - **********Checking status code**************
+2021-38-18 16:38:09 INFO  EmployeesRestAPI:42 - Status Code:200
+2021-38-18 16:38:09 INFO  EmployeesRestAPI:115 - *****************Finished TC001_Get_All_Employees********************
+2021-42-18 16:42:36 INFO  EmployeesRestAPI:18 - ***************TC001_GET_ALL_EMPLOYEES STARTED******************
+2021-42-18 16:42:40 INFO  EmployeesRestAPI:95 - ******************************Checking content Lengrh******************
+2021-42-18 16:42:40 INFO  EmployeesRestAPI:97 - Content Length :null
+2021-42-18 16:42:40 INFO  EmployeesRestAPI:70 - ****************************Checking content Type**************
+2021-42-18 16:42:40 INFO  EmployeesRestAPI:72 - Content Type is application/json; charset=utf-8
+2021-42-18 16:42:40 INFO  EmployeesRestAPI:29 - ********************Checking Response Body **********************
+2021-42-18 16:42:40 INFO  EmployeesRestAPI:31 - ResponseBody :{"page":1,"per_page":6,"total":12,"total_pages":2,"data":[{"id":1,"email":"george.bluth@reqres.in","first_name":"George","last_name":"Bluth","avatar":"https://reqres.in/img/faces/1-image.jpg"},{"id":2,"email":"janet.weaver@reqres.in","first_name":"Janet","last_name":"Weaver","avatar":"https://reqres.in/img/faces/2-image.jpg"},{"id":3,"email":"emma.wong@reqres.in","first_name":"Emma","last_name":"Wong","avatar":"https://reqres.in/img/faces/3-image.jpg"},{"id":4,"email":"eve.holt@reqres.in","first_name":"Eve","last_name":"Holt","avatar":"https://reqres.in/img/faces/4-image.jpg"},{"id":5,"email":"charles.morris@reqres.in","first_name":"Charles","last_name":"Morris","avatar":"https://reqres.in/img/faces/5-image.jpg"},{"id":6,"email":"tracey.ramos@reqres.in","first_name":"Tracey","last_name":"Ramos","avatar":"https://reqres.in/img/faces/6-image.jpg"}],"support":{"url":"https://reqres.in/#support-heading","text":"To keep ReqRes free, contributions towards server costs are appreciated!"}}
+2021-42-18 16:42:40 INFO  EmployeesRestAPI:50 - *********************Checking Response Time***********************
+2021-42-18 16:42:40 INFO  EmployeesRestAPI:52 - Response Time :589
+2021-42-18 16:42:40 INFO  EmployeesRestAPI:62 - ***************************Status line****************************
+2021-42-18 16:42:40 INFO  EmployeesRestAPI:64 - Status line : HTTP/1.1 200 OK
+2021-42-18 16:42:40 INFO  EmployeesRestAPI:79 - ********************Server Type************************
+2021-42-18 16:42:40 INFO  EmployeesRestAPI:81 - Server type is:cloudflare
+2021-42-18 16:42:40 INFO  EmployeesRestAPI:87 - ***************************Checking content Encoding**************
+2021-42-18 16:42:40 INFO  EmployeesRestAPI:89 - Content Encoding :gzip
+2021-42-18 16:42:40 INFO  EmployeesRestAPI:107 - **************************Getting cookies***********************
+2021-42-18 16:42:40 INFO  EmployeesRestAPI:40 - **********Checking status code**************
+2021-42-18 16:42:40 INFO  EmployeesRestAPI:42 - Status Code:200
+2021-42-18 16:42:40 INFO  EmployeesRestAPI:115 - *****************Finished TC001_Get_All_Employees********************
+2021-54-18 16:54:42 INFO  EmployeesRestAPI:18 - ***************TC001_GET_ALL_EMPLOYEES STARTED******************
+2021-54-18 16:54:47 INFO  EmployeesRestAPI:95 - ******************************Checking content Lengrh******************
+2021-54-18 16:54:47 INFO  EmployeesRestAPI:97 - Content Length :null
+2021-54-18 16:54:47 INFO  EmployeesRestAPI:70 - ****************************Checking content Type**************
+2021-54-18 16:54:47 INFO  EmployeesRestAPI:72 - Content Type is application/json; charset=utf-8
+2021-54-18 16:54:47 INFO  EmployeesRestAPI:29 - ********************Checking Response Body **********************
+2021-54-18 16:54:47 INFO  EmployeesRestAPI:31 - ResponseBody :{"page":1,"per_page":6,"total":12,"total_pages":2,"data":[{"id":1,"email":"george.bluth@reqres.in","first_name":"George","last_name":"Bluth","avatar":"https://reqres.in/img/faces/1-image.jpg"},{"id":2,"email":"janet.weaver@reqres.in","first_name":"Janet","last_name":"Weaver","avatar":"https://reqres.in/img/faces/2-image.jpg"},{"id":3,"email":"emma.wong@reqres.in","first_name":"Emma","last_name":"Wong","avatar":"https://reqres.in/img/faces/3-image.jpg"},{"id":4,"email":"eve.holt@reqres.in","first_name":"Eve","last_name":"Holt","avatar":"https://reqres.in/img/faces/4-image.jpg"},{"id":5,"email":"charles.morris@reqres.in","first_name":"Charles","last_name":"Morris","avatar":"https://reqres.in/img/faces/5-image.jpg"},{"id":6,"email":"tracey.ramos@reqres.in","first_name":"Tracey","last_name":"Ramos","avatar":"https://reqres.in/img/faces/6-image.jpg"}],"support":{"url":"https://reqres.in/#support-heading","text":"To keep ReqRes free, contributions towards server costs are appreciated!"}}
+2021-54-18 16:54:47 INFO  EmployeesRestAPI:50 - *********************Checking Response Time***********************
+2021-54-18 16:54:47 INFO  EmployeesRestAPI:52 - Response Time :599
+2021-54-18 16:54:47 INFO  EmployeesRestAPI:62 - ***************************Status line****************************
+2021-54-18 16:54:47 INFO  EmployeesRestAPI:64 - Status line : HTTP/1.1 200 OK
+2021-54-18 16:54:47 INFO  EmployeesRestAPI:79 - ********************Server Type************************
+2021-54-18 16:54:47 INFO  EmployeesRestAPI:81 - Server type is:cloudflare
+2021-54-18 16:54:47 INFO  EmployeesRestAPI:87 - ***************************Checking content Encoding**************
+2021-54-18 16:54:47 INFO  EmployeesRestAPI:89 - Content Encoding :gzip
+2021-54-18 16:54:47 INFO  EmployeesRestAPI:107 - **************************Getting cookies***********************
+2021-54-18 16:54:47 INFO  EmployeesRestAPI:40 - **********Checking status code**************
+2021-54-18 16:54:47 INFO  EmployeesRestAPI:42 - Status Code:200
+2021-54-18 16:54:47 INFO  EmployeesRestAPI:115 - *****************Finished TC001_Get_All_Employees********************
+2021-24-18 19:24:56 INFO  EmployeesRestAPI:18 - ***************TC001_GET_ALL_EMPLOYEES STARTED******************
+2021-25-18 19:25:01 INFO  EmployeesRestAPI:70 - ****************************Checking content Type**************
+2021-25-18 19:25:01 INFO  EmployeesRestAPI:72 - Content Type is application/json; charset=utf-8
+2021-25-18 19:25:01 INFO  EmployeesRestAPI:29 - ********************Checking Response Body **********************
+2021-25-18 19:25:01 INFO  EmployeesRestAPI:31 - ResponseBody :{"page":1,"per_page":6,"total":12,"total_pages":2,"data":[{"id":1,"email":"george.bluth@reqres.in","first_name":"George","last_name":"Bluth","avatar":"https://reqres.in/img/faces/1-image.jpg"},{"id":2,"email":"janet.weaver@reqres.in","first_name":"Janet","last_name":"Weaver","avatar":"https://reqres.in/img/faces/2-image.jpg"},{"id":3,"email":"emma.wong@reqres.in","first_name":"Emma","last_name":"Wong","avatar":"https://reqres.in/img/faces/3-image.jpg"},{"id":4,"email":"eve.holt@reqres.in","first_name":"Eve","last_name":"Holt","avatar":"https://reqres.in/img/faces/4-image.jpg"},{"id":5,"email":"charles.morris@reqres.in","first_name":"Charles","last_name":"Morris","avatar":"https://reqres.in/img/faces/5-image.jpg"},{"id":6,"email":"tracey.ramos@reqres.in","first_name":"Tracey","last_name":"Ramos","avatar":"https://reqres.in/img/faces/6-image.jpg"}],"support":{"url":"https://reqres.in/#support-heading","text":"To keep ReqRes free, contributions towards server costs are appreciated!"}}
+2021-25-18 19:25:01 INFO  EmployeesRestAPI:50 - *********************Checking Response Time***********************
+2021-25-18 19:25:01 INFO  EmployeesRestAPI:52 - Response Time :1248
+2021-25-18 19:25:01 INFO  EmployeesRestAPI:62 - ***************************Status line****************************
+2021-25-18 19:25:01 INFO  EmployeesRestAPI:64 - Status line : HTTP/1.1 200 OK
+2021-25-18 19:25:01 INFO  EmployeesRestAPI:79 - ********************Server Type************************
+2021-25-18 19:25:01 INFO  EmployeesRestAPI:81 - Server type is:cloudflare
+2021-25-18 19:25:01 INFO  EmployeesRestAPI:87 - ***************************Checking content Encoding**************
+2021-25-18 19:25:01 INFO  EmployeesRestAPI:89 - Content Encoding :gzip
+2021-25-18 19:25:01 INFO  EmployeesRestAPI:107 - **************************Getting cookies***********************
+2021-25-18 19:25:01 INFO  EmployeesRestAPI:40 - **********Checking status code**************
+2021-25-18 19:25:01 INFO  EmployeesRestAPI:42 - Status Code:200
+2021-25-18 19:25:01 INFO  EmployeesRestAPI:115 - *****************Finished TC001_Get_All_Employees********************
+2021-37-18 19:37:57 INFO  EmployeesRestAPI:18 - ***************TC001_GET_ALL_EMPLOYEES STARTED******************
+2021-38-18 19:38:02 INFO  EmployeesRestAPI:70 - ****************************Checking content Type**************
+2021-38-18 19:38:02 INFO  EmployeesRestAPI:72 - Content Type is application/json; charset=utf-8
+2021-38-18 19:38:02 INFO  EmployeesRestAPI:29 - ********************Checking Response Body **********************
+2021-38-18 19:38:02 INFO  EmployeesRestAPI:31 - ResponseBody :{"page":1,"per_page":6,"total":12,"total_pages":2,"data":[{"id":1,"email":"george.bluth@reqres.in","first_name":"George","last_name":"Bluth","avatar":"https://reqres.in/img/faces/1-image.jpg"},{"id":2,"email":"janet.weaver@reqres.in","first_name":"Janet","last_name":"Weaver","avatar":"https://reqres.in/img/faces/2-image.jpg"},{"id":3,"email":"emma.wong@reqres.in","first_name":"Emma","last_name":"Wong","avatar":"https://reqres.in/img/faces/3-image.jpg"},{"id":4,"email":"eve.holt@reqres.in","first_name":"Eve","last_name":"Holt","avatar":"https://reqres.in/img/faces/4-image.jpg"},{"id":5,"email":"charles.morris@reqres.in","first_name":"Charles","last_name":"Morris","avatar":"https://reqres.in/img/faces/5-image.jpg"},{"id":6,"email":"tracey.ramos@reqres.in","first_name":"Tracey","last_name":"Ramos","avatar":"https://reqres.in/img/faces/6-image.jpg"}],"support":{"url":"https://reqres.in/#support-heading","text":"To keep ReqRes free, contributions towards server costs are appreciated!"}}
+2021-38-18 19:38:02 INFO  EmployeesRestAPI:50 - *********************Checking Response Time***********************
+2021-38-18 19:38:02 INFO  EmployeesRestAPI:52 - Response Time :937
+2021-38-18 19:38:02 INFO  EmployeesRestAPI:62 - ***************************Status line****************************
+2021-38-18 19:38:02 INFO  EmployeesRestAPI:64 - Status line : HTTP/1.1 200 OK
+2021-38-18 19:38:02 INFO  EmployeesRestAPI:79 - ********************Server Type************************
+2021-38-18 19:38:02 INFO  EmployeesRestAPI:81 - Server type is:cloudflare
+2021-38-18 19:38:02 INFO  EmployeesRestAPI:87 - ***************************Checking content Encoding**************
+2021-38-18 19:38:02 INFO  EmployeesRestAPI:89 - Content Encoding :gzip
+2021-38-18 19:38:02 INFO  EmployeesRestAPI:107 - **************************Getting cookies***********************
+2021-38-18 19:38:02 INFO  EmployeesRestAPI:40 - **********Checking status code**************
+2021-38-18 19:38:02 INFO  EmployeesRestAPI:42 - Status Code:200
+2021-38-18 19:38:02 INFO  EmployeesRestAPI:115 - *****************Finished TC001_Get_All_Employees********************
+2021-11-18 20:11:11 INFO  EmployeesRestAPI:18 - ***************TC001_GET_ALL_EMPLOYEES STARTED******************
+2021-11-18 20:11:17 INFO  EmployeesRestAPI:70 - ****************************Checking content Type**************
+2021-11-18 20:11:17 INFO  EmployeesRestAPI:72 - Content Type is application/json; charset=utf-8
+2021-11-18 20:11:17 INFO  EmployeesRestAPI:29 - ********************Checking Response Body **********************
+2021-11-18 20:11:17 INFO  EmployeesRestAPI:31 - ResponseBody :{"page":1,"per_page":6,"total":12,"total_pages":2,"data":[{"id":1,"email":"george.bluth@reqres.in","first_name":"George","last_name":"Bluth","avatar":"https://reqres.in/img/faces/1-image.jpg"},{"id":2,"email":"janet.weaver@reqres.in","first_name":"Janet","last_name":"Weaver","avatar":"https://reqres.in/img/faces/2-image.jpg"},{"id":3,"email":"emma.wong@reqres.in","first_name":"Emma","last_name":"Wong","avatar":"https://reqres.in/img/faces/3-image.jpg"},{"id":4,"email":"eve.holt@reqres.in","first_name":"Eve","last_name":"Holt","avatar":"https://reqres.in/img/faces/4-image.jpg"},{"id":5,"email":"charles.morris@reqres.in","first_name":"Charles","last_name":"Morris","avatar":"https://reqres.in/img/faces/5-image.jpg"},{"id":6,"email":"tracey.ramos@reqres.in","first_name":"Tracey","last_name":"Ramos","avatar":"https://reqres.in/img/faces/6-image.jpg"}],"support":{"url":"https://reqres.in/#support-heading","text":"To keep ReqRes free, contributions towards server costs are appreciated!"}}
+2021-11-18 20:11:17 INFO  EmployeesRestAPI:50 - *********************Checking Response Time***********************
+2021-11-18 20:11:17 INFO  EmployeesRestAPI:52 - Response Time :1435
+2021-11-18 20:11:17 INFO  EmployeesRestAPI:62 - ***************************Status line****************************
+2021-11-18 20:11:17 INFO  EmployeesRestAPI:64 - Status line : HTTP/1.1 200 OK
+2021-11-18 20:11:17 INFO  EmployeesRestAPI:79 - ********************Server Type************************
+2021-11-18 20:11:17 INFO  EmployeesRestAPI:81 - Server type is:cloudflare
+2021-11-18 20:11:17 INFO  EmployeesRestAPI:87 - ***************************Checking content Encoding**************
+2021-11-18 20:11:17 INFO  EmployeesRestAPI:89 - Content Encoding :gzip
+2021-11-18 20:11:17 INFO  EmployeesRestAPI:107 - **************************Getting cookies***********************
+2021-11-18 20:11:17 INFO  EmployeesRestAPI:40 - **********Checking status code**************
+2021-11-18 20:11:17 INFO  EmployeesRestAPI:42 - Status Code:200
+2021-11-18 20:11:17 INFO  EmployeesRestAPI:115 - *****************Finished TC001_Get_All_Employees********************
+2021-20-18 20:20:21 INFO  EmployeesRestAPI:18 - ***************TC001_GET_ALL_EMPLOYEES STARTED******************
+2021-20-18 20:20:25 INFO  EmployeesRestAPI:70 - ****************************Checking content Type**************
+2021-20-18 20:20:25 INFO  EmployeesRestAPI:72 - Content Type is application/json; charset=utf-8
+2021-20-18 20:20:25 INFO  EmployeesRestAPI:29 - ********************Checking Response Body **********************
+2021-20-18 20:20:26 INFO  EmployeesRestAPI:31 - ResponseBody :{"page":1,"per_page":6,"total":12,"total_pages":2,"data":[{"id":1,"email":"george.bluth@reqres.in","first_name":"George","last_name":"Bluth","avatar":"https://reqres.in/img/faces/1-image.jpg"},{"id":2,"email":"janet.weaver@reqres.in","first_name":"Janet","last_name":"Weaver","avatar":"https://reqres.in/img/faces/2-image.jpg"},{"id":3,"email":"emma.wong@reqres.in","first_name":"Emma","last_name":"Wong","avatar":"https://reqres.in/img/faces/3-image.jpg"},{"id":4,"email":"eve.holt@reqres.in","first_name":"Eve","last_name":"Holt","avatar":"https://reqres.in/img/faces/4-image.jpg"},{"id":5,"email":"charles.morris@reqres.in","first_name":"Charles","last_name":"Morris","avatar":"https://reqres.in/img/faces/5-image.jpg"},{"id":6,"email":"tracey.ramos@reqres.in","first_name":"Tracey","last_name":"Ramos","avatar":"https://reqres.in/img/faces/6-image.jpg"}],"support":{"url":"https://reqres.in/#support-heading","text":"To keep ReqRes free, contributions towards server costs are appreciated!"}}
+2021-20-18 20:20:26 INFO  EmployeesRestAPI:50 - *********************Checking Response Time***********************
+2021-20-18 20:20:26 INFO  EmployeesRestAPI:52 - Response Time :641
+2021-20-18 20:20:26 INFO  EmployeesRestAPI:62 - ***************************Status line****************************
+2021-20-18 20:20:26 INFO  EmployeesRestAPI:64 - Status line : HTTP/1.1 200 OK
+2021-20-18 20:20:26 INFO  EmployeesRestAPI:79 - ********************Server Type************************
+2021-20-18 20:20:26 INFO  EmployeesRestAPI:81 - Server type is:cloudflare
+2021-20-18 20:20:26 INFO  EmployeesRestAPI:87 - ***************************Checking content Encoding**************
+2021-20-18 20:20:26 INFO  EmployeesRestAPI:89 - Content Encoding :gzip
+2021-20-18 20:20:26 INFO  EmployeesRestAPI:107 - **************************Getting cookies***********************
+2021-20-18 20:20:26 INFO  EmployeesRestAPI:40 - **********Checking status code**************
+2021-20-18 20:20:26 INFO  EmployeesRestAPI:42 - Status Code:200
+2021-20-18 20:20:26 INFO  EmployeesRestAPI:115 - *****************Finished TC001_Get_All_Employees********************
